@@ -7,9 +7,9 @@ Gem::Specification.new do |spec|
   spec.name          = "flickr_offline_gallery"
   spec.version       = FlickrOfflineGallery::VERSION
   spec.authors       = ["Lucas Parry"]
-  spec.email         = ["lucas@envato.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.email         = ["lparry@gmail.com"]
+  spec.summary       = %q{Build a local copy of a flickr photoset}
+  spec.description       = %q{Build a local copy of a flickr photoset, for the purpose off picking photos for your blog even when there's no internet}
   spec.homepage      = ""
   spec.license       = "MIT"
 
@@ -20,4 +20,5 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.5"
   spec.add_development_dependency "rake"
+  spec.add_dependency "flickraw"
 end
