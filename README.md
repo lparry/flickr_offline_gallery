@@ -1,7 +1,7 @@
 # FlickrOfflineGallery
 
 A tool to cache an offline copy of a flickr photoset, complete with all the html
-embed fragments for all available sizes, allowing you to pick out photos for
+embed snippets for all available sizes, allowing you to pick out photos for
 blog posts/etc even without an internet connection.
 
 ## Installation
@@ -10,7 +10,7 @@ blog posts/etc even without an internet connection.
 
 ## Usage
 
-    $ flickr_offline_gallery <Flickr photoset id>
+    $ FLICKR_API_KEY='<api_key>' FLICKR_SHARED_SECRET='<shared_secret>' flickr_offline_gallery <Flickr photoset id>
 
 In a url like
 `http://www.flickr.com/photos/83213379@N00/sets/72157636831703404/`, the

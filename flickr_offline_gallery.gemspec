@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Lucas Parry"]
   spec.email         = ["lparry@gmail.com"]
   spec.summary       = %q{Build a local copy of a flickr photoset}
-  spec.description       = %q{Build a local copy of a flickr photoset, including html embed codes for all image sizes, for the purpose off picking photos for your blog even when there's no internet}
+  spec.description       = %q{Build a local copy of a flickr photoset, including html embed snippets for all image sizes, for the purpose off picking photos for your blog even when there's no internet}
   spec.homepage      = ""
   spec.license       = "MIT, unless you're the NSA"
 
