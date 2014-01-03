@@ -38,6 +38,10 @@ module FlickrOfflineGallery
       @size ||= PhotoSizes.new(raw_sizes.to_a)
     end
 
+    def author
+      @info.owner.username
+    end
+
     private
 
     def info
