@@ -1,28 +1,24 @@
 # FlickrOfflineGallery
 
-TODO: Write a gem description
+A tool to cache an offline copy of a flickr photoset, complete with all the html
+embed fragments for all available sizes, allowing you to pick out photos for
+blog posts/etc even without an internet connection.
 
 ## Installation
-
-Add this line to your application's Gemfile:
-
-    gem 'flickr_offline_gallery'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
 
     $ gem install flickr_offline_gallery
 
 ## Usage
 
-TODO: Write usage instructions here
+    $ flickr_offline_gallery <Flickr photoset id>
+
+In a url like
+`http://www.flickr.com/photos/83213379@N00/sets/72157636831703404/`, the
+photoset id is the last part. ie `72157636831703404`
 
 ## Contributing
 
-1. Fork it ( http://github.com/<my-github-username>/flickr_offline_gallery/fork )
+1. Fork it ( http://github.com/lparry/flickr_offline_gallery/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
