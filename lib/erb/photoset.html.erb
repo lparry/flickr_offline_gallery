@@ -1,0 +1,13 @@
+<html>
+<head></head>
+<body>
+Photoset: <%= photoset.title %> by <% photoset.username %>
+<% photos.each do |photo| %>
+  <a href="<%= photo.local_html_path %>"><img src="<%= photo.local_jpg_path %>"
+    width="<%= photo.sizes[size].width %>"
+    height="<%= photo.sizes[size].height %>"
+  /></a>
+</body>
+</html>
+
+
