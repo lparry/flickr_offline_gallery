@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+
+require 'flickr_offline_gallery'
+
+FlickRaw.api_key       = "#{ENV["FLICKR_API_KEY"]}"
+FlickRaw.shared_secret = "#{ENV["FLICKR_SHARED_SECRET"]}"
+
+if ARGV.size != 1
+  puts "FlickrOfflineGallery"
+  puts "--------------------"
+  puts "Create a local mirror of a Flickr photoset, complete with html embed fragments"
+  puts "\tUsage:"
+  puts "\t\tflickr_offline_gallery <flickr_photoset_id>"
+  exit
+end
+
+photoset = FlickrOfflineGallery::Photoset.new(ARGV.first)
+FlickrOfflineGallery.render_photoset(photoset)

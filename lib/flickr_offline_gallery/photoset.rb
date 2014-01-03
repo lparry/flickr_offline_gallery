@@ -2,6 +2,7 @@ module FlickrOfflineGallery
   class Photoset
     def initialize(photoset_id)
       @photoset_id = photoset_id
+      ::FlickrOfflineGallery::Variables.slug = slug
     end
 
     def username
