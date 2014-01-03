@@ -1,4 +1,5 @@
 require 'flickraw'
+require 'erb'
 
 require "flickr_offline_gallery/version"
 require "flickr_offline_gallery/photo_size"
@@ -24,6 +25,16 @@ module FlickrOfflineGallery
   end
 
   def self.download
-    photoset = PhotosetDownloader.new("72157638802576105").download
+    PhotosetDownloader.new(photoset).download
+  end
+
+  def self.render_photo_page(photo)
+    render_erb("photo", :source => photo.local_path, :sizes => photo.sizes, :photo_url => photo.url, :title => photo.title, :author => photo.author)
+  end
+
+  def self.render_erb(template, locals)
+    full_template_path = "#{File.join(File.dirname(__FILE__), "erb",template)}.html.erb"
+    raise "unknown template: #{full_template_path}" unless File.exist?(full_template_path)
+    ERB.new(File.read(full_template_path)).result(OpenStruct.new(locals).instance_eval { binding })
   end
 end

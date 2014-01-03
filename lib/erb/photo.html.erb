@@ -1,5 +1,14 @@
-kasjdflkjsadlkfasd
+<html>
+<head></head>
+<body>
+<img src="<%= source %>" />
+<% sizes.each do |size| %>
+<p><%= size.label %> </p>
+<textarea style="height: 60px; width:800px;">
+<a href="<%= photo_url %>" title="<%= title %> by <%= author %>, on Flickr"><img src="<%= size.source %>" width="<%= size.width %>" height="<%= size.height %>" alt="<%= title %>"></a>
+</textarea>
+<% end %>
+</body>
+</html>
 
 
-
-<% binding.pry %>
