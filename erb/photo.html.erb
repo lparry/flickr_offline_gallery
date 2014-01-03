@@ -24,6 +24,25 @@
         display: inherit;
         margin-top: 10px
       }
+      .close {
+        position:absolute;
+        top:0px;
+        left:0px;
+        width:30px;
+        height:30px;
+        cursor:pointer;
+        background-color: white;
+        border-radius: 999px;
+        text-align: center;
+        text-decoration: none;
+        line-height: 30px;
+        color: grey;
+        border: 2px solid grey;
+        font-family: sans-serif;
+        font-weight: bold;
+      }
+      .close:hover {color:red}
+
     </style>
   </head>
 <body>
@@ -44,6 +63,7 @@
     <% end %>
     </span>
   </span>
+  <a class="close" href="../<%= index_page %>">X</a>
   <script>
   function hideSnippets() {
     var tags = document.getElementsByClassName('snippet'),

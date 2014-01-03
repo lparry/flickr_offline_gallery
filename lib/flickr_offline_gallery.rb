@@ -41,7 +41,13 @@ module FlickrOfflineGallery
 
   def self.render_photo_page(photo)
     File.open(photo.local_html_path, "w") do |f|
-      f.write render_erb("photo", :source => photo.img_filename, :sizes => photo.sizes, :photo_url => photo.url, :title => photo.title, :author => photo.author)
+      f.write render_erb("photo",
+                         :index_page => photo.local_html_path.sub(/\/.*/, ".html"),
+                         :source => photo.img_filename,
+                         :sizes => photo.sizes,
+                         :photo_url => photo.url,
+                         :title => photo.title,
+                         :author => photo.author)
     end
     puts "Rendered #{photo.local_html_path}"
   end
