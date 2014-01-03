@@ -2,9 +2,6 @@ module FlickrOfflineGallery
   class Photoset
     def initialize(photoset_id)
       @photoset_id = photoset_id
-      info
-      photos
-      nil
     end
 
     def username

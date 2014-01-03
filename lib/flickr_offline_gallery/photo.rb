@@ -7,10 +7,7 @@ module FlickrOfflineGallery
       @id = horrible_flickraw_response_junk["id"]
       @secret = horrible_flickraw_response_junk["secret"]
       @set = photoset_id
-      info
-      raw_sizes
-      puts "initialized photo '#{title}'"
-      nil
+      puts "Initialized #{@id}"
     end
 
     def title
