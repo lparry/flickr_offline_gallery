@@ -24,7 +24,7 @@ module FlickrOfflineGallery
     @photoset
   end
 
-  def self.download
+  def self.download(photoset)
     PhotosetDownloader.new(photoset).download
   end
 
