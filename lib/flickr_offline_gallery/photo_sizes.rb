@@ -4,5 +4,11 @@ module FlickrOfflineGallery
     def initialize(raw_sizes)
       super Hash[raw_sizes.map{|s| [s["label"].downcase.gsub(" ", "_"), PhotoSize.new(s)] }]
     end
+
+    def each
+      to_h.values.each do |value|
+        yield(value)
+      end
+    end
   end
 end
