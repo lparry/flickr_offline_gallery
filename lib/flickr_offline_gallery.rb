@@ -11,8 +11,16 @@ FlickRaw.api_key       = "#{ENV["FLICKR_API_KEY"]}"
 FlickRaw.shared_secret = "#{ENV["FLICKR_SHARED_SECRET"]}"
 
 module FlickrOfflineGallery
-  def self.generate
-    photoset = Photoset.new("72157638802576105")
+  class Variables
+    class << self
+      attr_accessor :slug
+    end
+  end
+
+  def self.photoset
+    @photoset ||= Photoset.new("72157638802576105")
+    Variables.slug = @photoset.slug
+    @photoset
   end
 
   def self.download

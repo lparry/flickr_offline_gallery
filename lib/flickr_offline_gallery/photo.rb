@@ -26,6 +26,10 @@ module FlickrOfflineGallery
       end
     end
 
+    def local_path
+      "#{::FlickrOfflineGallery::Variables.slug}/#{id}.jpg"
+    end
+
     def base_url
       @base_url ||= info.urls.find{|u| u["type"] == "photopage"}["_content"]
     end
