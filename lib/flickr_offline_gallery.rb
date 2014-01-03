@@ -28,8 +28,16 @@ module FlickrOfflineGallery
     PhotosetDownloader.new(photoset).download
   end
 
+  def self.render_photo_pages(photoset)
+    photoset.photos.each do |p|
+      render_photo_page(p)
+    end
+  end
+
   def self.render_photo_page(photo)
-    render_erb("photo", :source => photo.local_path, :sizes => photo.sizes, :photo_url => photo.url, :title => photo.title, :author => photo.author)
+    File.open(photo.local_html_path, "w") do |f|
+      f.write render_erb("photo", :source => photo.img_filename, :sizes => photo.sizes, :photo_url => photo.url, :title => photo.title, :author => photo.author)
+    end
   end
 
   def self.render_erb(template, locals)

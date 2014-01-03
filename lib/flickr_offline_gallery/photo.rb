@@ -26,8 +26,16 @@ module FlickrOfflineGallery
       end
     end
 
-    def local_path
-      "#{::FlickrOfflineGallery::Variables.slug}/#{id}.jpg"
+    def img_filename
+      "#{id}.jpg"
+    end
+
+    def local_jpg_path
+      "#{::FlickrOfflineGallery::Variables.slug}/#{img_filename}"
+    end
+
+    def local_html_path
+      local_jpg_path.sub(/\.jpg$/, ".html")
     end
 
     def base_url
