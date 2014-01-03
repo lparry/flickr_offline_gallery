@@ -1,5 +1,6 @@
 require 'flickraw'
 require 'erb'
+require 'fileutils'
 
 require "flickr_offline_gallery/version"
 require "flickr_offline_gallery/photo_size"
