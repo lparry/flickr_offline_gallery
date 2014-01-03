@@ -5,14 +5,15 @@ require 'flickr_offline_gallery'
 FlickRaw.api_key       = "#{ENV["FLICKR_API_KEY"]}"
 FlickRaw.shared_secret = "#{ENV["FLICKR_SHARED_SECRET"]}"
 
-if ARGV.size != 1
+if ARGV.size == 0
   puts "FlickrOfflineGallery"
   puts "--------------------"
   puts "Create a local mirror of a Flickr photoset, complete with html embed fragments"
   puts "\tUsage:"
-  puts "\t\tflickr_offline_gallery <flickr_photoset_id>"
+  puts "\t\tflickr_offline_gallery <flickr_photoset_id> [size to download]"
+  puts " - size is optional, and defaults to medium_800. Available sizes depend on the Photoset"
   exit
 end
 
-photoset = FlickrOfflineGallery::Photoset.new(ARGV.first)
-FlickrOfflineGallery.render_photoset(photoset)
+photoset = FlickrOfflineGallery::Photoset.new(ARGV[0])
+FlickrOfflineGallery.render_photoset(photoset, ARGV[1] || "medium_800")

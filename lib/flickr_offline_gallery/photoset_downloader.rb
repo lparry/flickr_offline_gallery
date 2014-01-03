@@ -1,6 +1,6 @@
 module FlickrOfflineGallery
   class PhotosetDownloader
-    def initialize(photoset, size = "medium_800")
+    def initialize(photoset, size)
       @photoset = photoset
       @size = size
     end

@@ -6,7 +6,7 @@ module FlickrOfflineGallery
     end
 
     def username
-      info.username
+      info.ownername
     end
 
     def title

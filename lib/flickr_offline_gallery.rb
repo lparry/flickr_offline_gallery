@@ -16,12 +16,12 @@ module FlickrOfflineGallery
     end
   end
 
-  def self.download(photoset)
-    PhotosetDownloader.new(photoset).download
+  def self.download(photoset, size = "medium_800")
+    PhotosetDownloader.new(photoset, size).download
   end
 
-  def self.render_photoset(photoset)
-    download(photoset)
+  def self.render_photoset(photoset, size)
+    download(photoset, size)
     render_photo_pages(photoset)
     render_photoset_index_page(photoset)
   end
