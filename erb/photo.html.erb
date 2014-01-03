@@ -1,15 +1,24 @@
 <html>
-<head></head>
+  <head>
+    <style>
+      textarea {
+        height: 400px;
+        width:400px;
+        vertical-align: top;
+        display: none;
+      }
+    </style>
+  </head>
 <body>
-<img src="<%= source %>" /><br>
+<img src="<%= source %>" />
 <% sizes.each do |size| %>
-<textarea id="<%= size.key %>" style="height: 60px; width:800px;">
-<a href="<%= photo_url %>" title="<%= title %> by <%= author %>, on Flickr"><img src="<%= size.source %>" width="<%= size.width %>" height="<%= size.height %>" alt="<%= title %>"></a>
-</textarea>
+  <button onclick="script:showId('<%= size.key %>');"><%= size.label %> </button>
 <% end %>
 <br>
 <% sizes.each do |size| %>
-  <button onclick="script:showId('<%= size.key %>');"><%= size.label %> </button>
+<textarea id="<%= size.key %>">
+<a href="<%= photo_url %>" title="<%= title %> by <%= author %>, on Flickr"><img src="<%= size.source %>" width="<%= size.width %>" height="<%= size.height %>" alt="<%= title %>"></a>
+</textarea>
 <% end %>
 <script>
 function hideTextAreas() {
@@ -20,11 +29,11 @@ function hideTextAreas() {
         tags[i].style.display = "none";
     }
 };
-hideTextAreas();
 
 function showId(id) {
   hideTextAreas();
   document.getElementById(id).style.display = "";
+  document.getElementById(id).select();
 };
 showId("medium_800");
 </script>

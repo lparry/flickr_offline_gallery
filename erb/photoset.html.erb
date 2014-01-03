@@ -1,11 +1,13 @@
 <html>
-<head></head>
+  <head>
+    <style>
+      img { height: 375px; }
+    </style>
+  </head>
 <body>
 <h1><%= photoset.title %> by <%= photoset.username %></h1>
 <% photos.each do |photo| %>
   <a href="<%= photo.local_html_path %>"><img src="<%= photo.local_jpg_path %>"
-    width="<%= photo.sizes[size].width %>"
-    height="<%= photo.sizes[size].height %>"
   /></a>
 <% end %>
 </body>

@@ -30,6 +30,7 @@ module FlickrOfflineGallery
     File.open("#{photoset.slug}.html", "w") do |f|
       f.write render_erb("photoset", :photoset => photoset, :photos => photoset.photos, :size => "medium")
     end
+    puts "#{photoset.slug}.html"
   end
 
   def self.render_photo_pages(photoset)
@@ -42,6 +43,7 @@ module FlickrOfflineGallery
     File.open(photo.local_html_path, "w") do |f|
       f.write render_erb("photo", :source => photo.img_filename, :sizes => photo.sizes, :photo_url => photo.url, :title => photo.title, :author => photo.author)
     end
+    puts "Rendered #{photo.local_html_path}"
   end
 
   def self.render_erb(template, locals)
