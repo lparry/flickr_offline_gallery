@@ -7,7 +7,8 @@ module FlickrOfflineGallery
       @id = horrible_flickraw_response_junk["id"]
       @secret = horrible_flickraw_response_junk["secret"]
       @set = photoset_id
-      puts "Initialized #{@id}"
+      eager_load
+      puts "Fetched data about photo #{title}"
     end
 
     def title
@@ -51,6 +52,11 @@ module FlickrOfflineGallery
     end
 
     private
+
+    def eager_load
+      info
+      raw_sizes
+    end
 
     def info
       @info ||= OpenStruct.new(flickr.photos.getInfo(:photo_id => @id).to_hash)
