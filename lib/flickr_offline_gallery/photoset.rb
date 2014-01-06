@@ -26,7 +26,7 @@ module FlickrOfflineGallery
     private
 
     def info
-      @info ||= OpenStruct.new(Flickr.get_photoset(@photoset_id))
+      @info ||= OpenStruct.new(FlickrAPI.get_photoset(@photoset_id))
     end
   end
 end

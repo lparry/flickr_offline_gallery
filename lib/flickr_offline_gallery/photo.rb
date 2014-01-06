@@ -56,11 +56,11 @@ module FlickrOfflineGallery
     end
 
     def info
-      @info ||= OpenStruct.new(Flickr.get_photo_info(@id))
+      @info ||= OpenStruct.new(FlickrAPI.get_photo_info(@id))
     end
 
     def raw_sizes
-      @raw_sizes ||= Flickr.get_photo_sizes(@id)
+      @raw_sizes ||= FlickrAPI.get_photo_sizes(@id)
     end
 
   end

@@ -8,6 +8,7 @@ require "flickr_offline_gallery/photo_sizes"
 require "flickr_offline_gallery/photo"
 require "flickr_offline_gallery/photoset"
 require "flickr_offline_gallery/photoset_downloader"
+require "flickr_offline_gallery/flickr_a_p_i"
 
 module FlickrOfflineGallery
   class Variables
