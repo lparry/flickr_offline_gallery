@@ -1,14 +1,11 @@
 module FlickrOfflineGallery
   class Photo
 
-    attr_reader :id, :secret, :set
-
     def initialize(horrible_flickraw_response_junk, photoset_id = nil)
       @id = horrible_flickraw_response_junk["id"]
-      @secret = horrible_flickraw_response_junk["secret"]
-      @set = photoset_id
+      @photoset_id = photoset_id
       eager_load
-      puts "Fetched data about photo #{title}"
+      puts %(Fetched data about photo #{@id}: "#{title}")
     end
 
     def title
@@ -20,15 +17,15 @@ module FlickrOfflineGallery
     end
 
     def url
-      if set
-        "#{base_url}in/set-#{set}"
+      if @photoset_id
+        "#{base_url}in/set-#{@photoset_id}"
       else
         base_url
       end
     end
 
     def img_filename
-      "#{id}.jpg"
+      "#{@id}.jpg"
     end
 
     def local_jpg_path
