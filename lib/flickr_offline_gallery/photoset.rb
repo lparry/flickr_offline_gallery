@@ -26,7 +26,7 @@ module FlickrOfflineGallery
     private
 
     def info
-      @info ||= OpenStruct.new(flickr.photosets.getPhotos(:photoset_id => @photoset_id).to_hash)
+      @info ||= OpenStruct.new(Flickr.get_photoset(@photoset_id))
     end
   end
 end

@@ -56,11 +56,11 @@ module FlickrOfflineGallery
     end
 
     def info
-      @info ||= OpenStruct.new(flickr.photos.getInfo(:photo_id => @id).to_hash)
+      @info ||= OpenStruct.new(Flickr.get_photo_info(@id))
     end
 
     def raw_sizes
-      @raw_sizes ||= flickr.photos.getSizes :photo_id => @id
+      @raw_sizes ||= Flickr.get_photo_sizes(@id)
     end
 
   end
