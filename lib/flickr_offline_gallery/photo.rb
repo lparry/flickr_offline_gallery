@@ -5,7 +5,7 @@ module FlickrOfflineGallery
       @id = horrible_flickraw_response_junk["id"]
       @photoset_id = photoset_id
       eager_load
-      puts %(Fetched data about photo #{@id}: "#{title}")
+     ::FlickrOfflineGallery.verbose_puts %(Fetched data about photo #{@id}: "#{title}")
     end
 
     def title

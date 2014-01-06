@@ -31,7 +31,7 @@ module FlickrOfflineGallery
     File.open("#{photoset.slug}.html", "w") do |f|
       f.write render_erb("photoset", :photoset => photoset, :photos => photoset.photos, :size => "medium")
     end
-    puts "#{photoset.slug}.html"
+   ::FlickrOfflineGallery.verbose_puts "#{photoset.slug}.html"
   end
 
   def self.render_photo_pages(photoset)
@@ -50,12 +50,17 @@ module FlickrOfflineGallery
                          :title => photo.title,
                          :author => photo.author)
     end
-    puts "Rendered #{photo.local_html_path}"
+   ::FlickrOfflineGallery.verbose_puts "Rendered #{photo.local_html_path}"
   end
 
   def self.render_erb(template, locals)
     full_template_path = File.expand_path("../../erb/#{template}.html.erb",__FILE__)
     raise "unknown template: #{full_template_path}" unless File.exist?(full_template_path)
     ERB.new(File.read(full_template_path)).result(OpenStruct.new(locals).instance_eval { binding })
+  end
+
+  def self.verbose_puts(string)
+   ::FlickrOfflineGallery.verbose_puts(string) if ENV["VERBOSE"]
+    string
   end
 end

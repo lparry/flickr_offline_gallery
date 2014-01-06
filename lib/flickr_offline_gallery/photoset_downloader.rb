@@ -14,7 +14,7 @@ module FlickrOfflineGallery
         unless File.exist?(local_path)
           #TODO: this is lazy, so sue me
           `curl --location -so "#{local_path}" "#{url}"`
-          puts "Downloaded #{local_path}"
+         ::FlickrOfflineGallery.verbose_puts "Downloaded #{local_path}"
         end
       end
     end
