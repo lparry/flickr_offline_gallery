@@ -4,7 +4,8 @@ source 'https://rubygems.org'
 gemspec
 
 gem 'vcr'
-gem 'webmock'
+gem 'webmock', '< 1.16'
 gem 'rspec'
 gem 'pry'
 gem 'pry-rescue'
+gem 'pry-plus'
