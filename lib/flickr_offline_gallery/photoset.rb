@@ -1,8 +1,8 @@
 module FlickrOfflineGallery
   class Photoset
     def initialize(photoset_id)
-      eager_load
       @photoset_id = photoset_id
+      eager_load
       ::FlickrOfflineGallery::Variables.slug = slug
     end
 
