@@ -9,6 +9,9 @@ require "flickr_offline_gallery/photo"
 require "flickr_offline_gallery/photoset"
 require "flickr_offline_gallery/photoset_downloader"
 require "flickr_offline_gallery/flickr_a_p_i"
+require "flickr_offline_gallery/template_renderer"
+require "flickr_offline_gallery/photo_page"
+require "flickr_offline_gallery/photoset_index_page"
 
 module FlickrOfflineGallery
   class Variables
@@ -24,33 +27,13 @@ module FlickrOfflineGallery
   def self.render_photoset(photoset, size)
     download(photoset, size)
     render_photo_pages(photoset)
-    render_photoset_index_page(photoset)
-  end
-
-  def self.render_photoset_index_page(photoset)
-    File.open("#{photoset.slug}.html", "w") do |f|
-      f.write render_erb("photoset", :photoset => photoset, :photos => photoset.photos, :size => "medium")
-    end
-   ::FlickrOfflineGallery.verbose_puts "#{photoset.slug}.html"
+    PhotosetIndexPage.new(photoset).write
   end
 
   def self.render_photo_pages(photoset)
     photoset.photos.each do |p|
-      render_photo_page(p)
+      PhotoPage.new(p).write
     end
-  end
-
-  def self.render_photo_page(photo)
-    File.open(photo.local_html_path, "w") do |f|
-      f.write render_erb("photo",
-                         :index_page => photo.local_html_path.sub(/\/.*/, ".html"),
-                         :source => photo.img_filename,
-                         :sizes => photo.sizes,
-                         :photo_url => photo.url,
-                         :title => photo.title,
-                         :author => photo.author)
-    end
-   ::FlickrOfflineGallery.verbose_puts "Rendered #{photo.local_html_path}"
   end
 
 

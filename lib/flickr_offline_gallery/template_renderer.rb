@@ -17,8 +17,23 @@ module FlickrOfflineGallery
       @template_content ||= File.read(template_path)
     end
 
-    def render(locals)
+    def render_erb(locals)
       ERB.new(template_contents).result(OpenStruct.new(locals).instance_eval { binding })
+    end
+
+    def render
+      raise "not implemented"
+    end
+
+    def write
+      raise "not implemented"
+    end
+
+    def write_file(filename)
+      File.open(filename, 'w') do |file|
+        file.write render
+      end
+      ::FlickrOfflineGallery.verbose_puts "Wrote out #{filename}"
     end
   end
 end

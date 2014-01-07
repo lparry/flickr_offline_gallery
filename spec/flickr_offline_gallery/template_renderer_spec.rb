@@ -3,6 +3,7 @@ module FlickrOfflineGallery
   describe TemplateRenderer do
     subject(:renderer) { described_class.new(template_name) }
     let(:template_name) { "cool_template" }
+    let(:test_filename) { "tmp/template_renderer_spec.html" }
     let(:template_contents) do <<-ERB
                               This is <%= variable %>!
                               ERB
@@ -33,8 +34,18 @@ module FlickrOfflineGallery
       File.stub(:exist? => true)
       File.stub(:read => template_contents)
 
-      renderer.render(:variable => "awesome").strip.should == "This is awesome!"
-      renderer.render(:variable => "crappy").strip.should == "This is crappy!"
+      renderer.render_erb(:variable => "awesome").strip.should == "This is awesome!"
+      renderer.render_erb(:variable => "crappy").strip.should == "This is crappy!"
+    end
+
+    it "should write the results of the render method to a file" do
+      File.delete(test_filename)
+
+      renderer.should_receive(:render).and_return(template_contents)
+
+      renderer.write_file(test_filename)
+      File.read(test_filename).should == template_contents
+
     end
   end
 end

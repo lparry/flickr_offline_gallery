@@ -21,6 +21,8 @@ require 'pry-rescue'
 require 'flickraw'
 require 'flickr_offline_gallery'
 
+GEM_ROOT = File.expand_path("../..", __FILE__)
+
 if  ENV["FLICKR_OFFLINE_GALLERY_SPEC_API_KEY"] && ENV["FLICKR_OFFLINE_GALLERY_SPEC_SHARED_SECRET"]
   FlickRaw.api_key =       ENV["FLICKR_OFFLINE_GALLERY_SPEC_API_KEY"]
   FlickRaw.shared_secret = ENV["FLICKR_OFFLINE_GALLERY_SPEC_SHARED_SECRET"]
