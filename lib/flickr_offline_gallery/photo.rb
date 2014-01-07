@@ -12,10 +12,6 @@ module FlickrOfflineGallery
       info.title
     end
 
-    def date
-      @date ||= DateTime.parse(info.dates["taken"])
-    end
-
     def url
       if @photoset_id
         "#{base_url}in/set-#{@photoset_id}"
