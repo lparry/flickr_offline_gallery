@@ -1,3 +1,4 @@
+require 'net/http'
 module FlickrOfflineGallery
   class PhotosetDownloader
     def initialize(photoset, size)
@@ -13,7 +14,7 @@ module FlickrOfflineGallery
 
         unless File.exist?(local_path)
           #TODO: this is lazy, so sue me
-          `curl --location -so "#{local_path}" "#{url}"`
+          download_file(url, local_path)
          ::FlickrOfflineGallery.verbose_puts "Downloaded #{local_path}"
         end
       end
@@ -23,6 +24,16 @@ module FlickrOfflineGallery
 
     def photos
       @photoset.photos
+    end
+
+    def download_file(url, destination)
+      uri = URI.parse(url)
+      Net::HTTP.start(uri.host,uri.port) do |http|
+        resp = http.get(uri.path)
+        File.open(destination, "wb") do |file|
+          file.write(resp.body)
+        end
+      end
     end
 
   end
