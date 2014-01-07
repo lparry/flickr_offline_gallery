@@ -1,5 +1,4 @@
 require 'spec_helper'
-require "flickr_offline_gallery"
 
 module FlickrOfflineGallery
   describe ".render_photoset" do
