@@ -14,7 +14,7 @@ module FlickrOfflineGallery
     end
 
     def slug
-      title.downcase.gsub(/[^a-z0-9]/, "-").gsub(/-+/, "-")
+      title.downcase.tr_s("^a-z0-9", "-")
     end
 
     def photos
