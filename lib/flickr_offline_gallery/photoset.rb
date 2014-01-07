@@ -1,6 +1,7 @@
 module FlickrOfflineGallery
   class Photoset
     def initialize(photoset_id)
+      eager_load
       @photoset_id = photoset_id
       ::FlickrOfflineGallery::Variables.slug = slug
     end
@@ -24,6 +25,11 @@ module FlickrOfflineGallery
     end
 
     private
+
+    def eager_load
+      info
+      photos
+    end
 
     def info
       @info ||= OpenStruct.new(FlickrAPI.get_photoset(@photoset_id))
