@@ -5,7 +5,7 @@ module FlickrOfflineGallery
 
     before do
       #this is horrible
-      ::FlickrOfflineGallery::Variables.slug = "foo"
+      Variables.slug = "foo"
     end
 
     let(:horrible_raw_flickr_junk) do
