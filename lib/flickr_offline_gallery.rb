@@ -38,7 +38,7 @@ module FlickrOfflineGallery
 
 
   def self.verbose_puts(string)
-   ::FlickrOfflineGallery.verbose_puts(string) if ENV["VERBOSE"]
+    puts(string) if ENV["VERBOSE"]
     string
   end
 end
