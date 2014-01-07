@@ -33,15 +33,27 @@ VCR.configure do |c|
   c.hook_into :webmock
 
   c.filter_sensitive_data('xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx') do |interaction|
-    interaction.request.headers["Authorization"].first.sub(/.*oauth_nonce="([^"]*)".*/, "\\1")
+    if auth_headers = interaction.request.headers["Authorization"]
+      auth_headers.first.sub(/.*oauth_nonce="([^"]*)".*/, "\\1")
+    else
+      nil
+    end
+  end
 
   c.filter_sensitive_data('xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx') do |interaction|
-    interaction.request.headers["Authorization"].first.sub(/.*oauth_consumer_key="([^"]*)".*/, "\\1")
+    if auth_headers = interaction.request.headers["Authorization"]
+      auth_headers.first.sub(/.*oauth_consumer_key="([^"]*)".*/, "\\1")
+    else
+      nil
+    end
   end
 
   c.filter_sensitive_data('xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx') do |interaction|
-    interaction.request.headers["Authorization"].first.sub(/.*oauth_signature="([^"]*)".*/, "\\1")
-  end
+    if auth_headers = interaction.request.headers["Authorization"]
+      auth_headers.first.sub(/.*oauth_signature="([^"]*)".*/, "\\1")
+    else
+      nil
+    end
   end
 end
 

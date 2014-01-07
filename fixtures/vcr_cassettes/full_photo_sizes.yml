@@ -1,0 +1,164 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://api.flickr.com/services/rest/
+    body:
+      encoding: US-ASCII
+      string: photo_id=10440808526&method=flickr.photos.getInfo&format=json&nojsoncallback=1
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - FlickRaw/0.9.7
+      Authorization:
+      - OAuth realm="http://api.flickr.com/services/rest/", oauth_consumer_key="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        oauth_nonce="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", oauth_signature="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        oauth_signature_method="HMAC-SHA1", oauth_timestamp="1389111850", oauth_token="",
+        oauth_version="1.0"
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 07 Jan 2014 16:24:10 GMT
+      P3p:
+      - policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV
+        TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY
+        ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+      Cache-Control:
+      - private
+      X-Served-By:
+      - www5.flickr.bf1.yahoo.com
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '604'
+      Content-Type:
+      - application/json
+      Age:
+      - '4'
+      Server:
+      - ATS/4.0.2
+      Via:
+      - http/1.1 fts122.flickr.bf1.yahoo.com (ApacheTrafficServer/4.0.1 [cMsSf ]),
+        http/1.1 r07.ycpi.dee.yahoo.net (ApacheTrafficServer/4.0.2 [cMsSf ])
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: "{\"photo\":{\"id\":\"10440808526\", \"secret\":\"c3fd515635\", \"server\":\"7402\",
+        \"farm\":8, \"dateuploaded\":\"1382539271\", \"isfavorite\":0, \"license\":\"0\",
+        \"safety_level\":\"0\", \"rotation\":0, \"originalsecret\":\"5a2e1d9666\",
+        \"originalformat\":\"jpg\", \"owner\":{\"nsid\":\"83213379@N00\", \"username\":\"Lucas
+        the nomad\", \"realname\":\"\", \"location\":\"Melbourne, Australia\", \"iconserver\":\"7410\",
+        \"iconfarm\":8, \"path_alias\":null}, \"title\":{\"_content\":\"Giant hippo
+        yawn\"}, \"description\":{\"_content\":\"\"}, \"visibility\":{\"ispublic\":1,
+        \"isfriend\":0, \"isfamily\":0}, \"dates\":{\"posted\":\"1382539271\", \"taken\":\"2013-08-13
+        18:27:16\", \"takengranularity\":\"0\", \"lastupdate\":\"1382539314\"}, \"views\":\"37\",
+        \"editability\":{\"cancomment\":0, \"canaddmeta\":0}, \"publiceditability\":{\"cancomment\":1,
+        \"canaddmeta\":0}, \"usage\":{\"candownload\":1, \"canblog\":0, \"canprint\":0,
+        \"canshare\":1}, \"comments\":{\"_content\":\"0\"}, \"notes\":{\"note\":[]},
+        \"people\":{\"haspeople\":0}, \"tags\":{\"tag\":[{\"id\":\"5152225-10440808526-25848\",
+        \"author\":\"83213379@N00\", \"raw\":\"Uganda\", \"_content\":\"uganda\",
+        \"machine_tag\":0}]}, \"urls\":{\"url\":[{\"type\":\"photopage\", \"_content\":\"http:\\/\\/www.flickr.com\\/photos\\/83213379@N00\\/10440808526\\/\"}]},
+        \"media\":\"photo\"}, \"stat\":\"ok\"}"
+    http_version: 
+  recorded_at: Tue, 07 Jan 2014 16:24:11 GMT
+- request:
+    method: post
+    uri: http://api.flickr.com/services/rest/
+    body:
+      encoding: US-ASCII
+      string: photo_id=10440808526&method=flickr.photos.getSizes&format=json&nojsoncallback=1
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - FlickRaw/0.9.7
+      Authorization:
+      - OAuth realm="http://api.flickr.com/services/rest/", oauth_consumer_key="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        oauth_nonce="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", oauth_signature="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        oauth_signature_method="HMAC-SHA1", oauth_timestamp="1389111851", oauth_token="",
+        oauth_version="1.0"
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 07 Jan 2014 16:24:11 GMT
+      P3p:
+      - policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV
+        TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY
+        ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+      Cache-Control:
+      - private
+      X-Served-By:
+      - www309.flickr.bf1.yahoo.com
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '471'
+      Content-Type:
+      - application/json
+      Age:
+      - '0'
+      Server:
+      - ATS/4.0.2
+      Via:
+      - http/1.1 fts118.flickr.bf1.yahoo.com (ApacheTrafficServer/4.0.1 [cMsSf ]),
+        http/1.1 r21.ycpi.dee.yahoo.net (ApacheTrafficServer/4.0.2 [cMsSf ])
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: "{\"sizes\":{\"canblog\":0, \"canprint\":0, \"candownload\":1, \"size\":[{\"label\":\"Square\",
+        \"width\":75, \"height\":75, \"source\":\"http:\\/\\/farm8.staticflickr.com\\/7402\\/10440808526_c3fd515635_s.jpg\",
+        \"url\":\"http:\\/\\/www.flickr.com\\/photos\\/83213379@N00\\/10440808526\\/sizes\\/sq\\/\",
+        \"media\":\"photo\"}, {\"label\":\"Large Square\", \"width\":\"150\", \"height\":\"150\",
+        \"source\":\"http:\\/\\/farm8.staticflickr.com\\/7402\\/10440808526_c3fd515635_q.jpg\",
+        \"url\":\"http:\\/\\/www.flickr.com\\/photos\\/83213379@N00\\/10440808526\\/sizes\\/q\\/\",
+        \"media\":\"photo\"}, {\"label\":\"Thumbnail\", \"width\":\"100\", \"height\":\"75\",
+        \"source\":\"http:\\/\\/farm8.staticflickr.com\\/7402\\/10440808526_c3fd515635_t.jpg\",
+        \"url\":\"http:\\/\\/www.flickr.com\\/photos\\/83213379@N00\\/10440808526\\/sizes\\/t\\/\",
+        \"media\":\"photo\"}, {\"label\":\"Small\", \"width\":\"240\", \"height\":\"180\",
+        \"source\":\"http:\\/\\/farm8.staticflickr.com\\/7402\\/10440808526_c3fd515635_m.jpg\",
+        \"url\":\"http:\\/\\/www.flickr.com\\/photos\\/83213379@N00\\/10440808526\\/sizes\\/s\\/\",
+        \"media\":\"photo\"}, {\"label\":\"Small 320\", \"width\":\"320\", \"height\":240,
+        \"source\":\"http:\\/\\/farm8.staticflickr.com\\/7402\\/10440808526_c3fd515635_n.jpg\",
+        \"url\":\"http:\\/\\/www.flickr.com\\/photos\\/83213379@N00\\/10440808526\\/sizes\\/n\\/\",
+        \"media\":\"photo\"}, {\"label\":\"Medium\", \"width\":\"500\", \"height\":\"375\",
+        \"source\":\"http:\\/\\/farm8.staticflickr.com\\/7402\\/10440808526_c3fd515635.jpg\",
+        \"url\":\"http:\\/\\/www.flickr.com\\/photos\\/83213379@N00\\/10440808526\\/sizes\\/m\\/\",
+        \"media\":\"photo\"}, {\"label\":\"Medium 640\", \"width\":\"640\", \"height\":\"481\",
+        \"source\":\"http:\\/\\/farm8.staticflickr.com\\/7402\\/10440808526_c3fd515635_z.jpg\",
+        \"url\":\"http:\\/\\/www.flickr.com\\/photos\\/83213379@N00\\/10440808526\\/sizes\\/z\\/\",
+        \"media\":\"photo\"}, {\"label\":\"Medium 800\", \"width\":\"800\", \"height\":601,
+        \"source\":\"http:\\/\\/farm8.staticflickr.com\\/7402\\/10440808526_c3fd515635_c.jpg\",
+        \"url\":\"http:\\/\\/www.flickr.com\\/photos\\/83213379@N00\\/10440808526\\/sizes\\/c\\/\",
+        \"media\":\"photo\"}, {\"label\":\"Large\", \"width\":\"1024\", \"height\":\"769\",
+        \"source\":\"http:\\/\\/farm8.staticflickr.com\\/7402\\/10440808526_c3fd515635_b.jpg\",
+        \"url\":\"http:\\/\\/www.flickr.com\\/photos\\/83213379@N00\\/10440808526\\/sizes\\/l\\/\",
+        \"media\":\"photo\"}, {\"label\":\"Large 1600\", \"width\":\"1600\", \"height\":1201,
+        \"source\":\"http:\\/\\/farm8.staticflickr.com\\/7402\\/10440808526_daad8821b0_h.jpg\",
+        \"url\":\"http:\\/\\/www.flickr.com\\/photos\\/83213379@N00\\/10440808526\\/sizes\\/h\\/\",
+        \"media\":\"photo\"}, {\"label\":\"Large 2048\", \"width\":\"2048\", \"height\":1537,
+        \"source\":\"http:\\/\\/farm8.staticflickr.com\\/7402\\/10440808526_793af299f0_k.jpg\",
+        \"url\":\"http:\\/\\/www.flickr.com\\/photos\\/83213379@N00\\/10440808526\\/sizes\\/k\\/\",
+        \"media\":\"photo\"}, {\"label\":\"Original\", \"width\":\"2603\", \"height\":\"1954\",
+        \"source\":\"http:\\/\\/farm8.staticflickr.com\\/7402\\/10440808526_5a2e1d9666_o.jpg\",
+        \"url\":\"http:\\/\\/www.flickr.com\\/photos\\/83213379@N00\\/10440808526\\/sizes\\/o\\/\",
+        \"media\":\"photo\"}]}, \"stat\":\"ok\"}"
+    http_version: 
+  recorded_at: Tue, 07 Jan 2014 16:24:12 GMT
+recorded_with: VCR 2.8.0
