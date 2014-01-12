@@ -3,7 +3,6 @@ module FlickrOfflineGallery
     def initialize(photoset_id)
       @photoset_id = photoset_id
       eager_load
-      ::FlickrOfflineGallery::Variables.slug = slug
     end
 
     def username
@@ -21,7 +20,7 @@ module FlickrOfflineGallery
     def photos
       raise "photoset has more than 500 images and I'm too lazy to handle that right now" if info.pages > 1
      ::FlickrOfflineGallery.verbose_puts "Initializing photoset... " unless @photos
-      @photos ||= info.photo.map { |raw_response| Photo.new(raw_response, @photoset_id) }.tap{::FlickrOfflineGallery.verbose_puts "Finished initializing photoset!"}
+      @photos ||= info.photo.map { |raw_response| Photo.new(raw_response, @photoset_id, :output_directory => slug) }.tap{::FlickrOfflineGallery.verbose_puts "Finished initializing photoset!"}
     end
 
     def index_page_filename

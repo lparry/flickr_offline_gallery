@@ -3,11 +3,6 @@ require 'spec_helper'
 module FlickrOfflineGallery
   describe Photo do
 
-    before do
-      #this is horrible
-      Variables.slug = "foo"
-    end
-
     let(:horrible_raw_flickr_junk) do
       VCR.use_cassette('photo') do
         FlickrAPI.get_photo_info("10440808526")
@@ -19,7 +14,7 @@ module FlickrOfflineGallery
     subject!(:photo) {
 
       VCR.use_cassette('full_photo_sizes') do
-        described_class.new(horrible_raw_flickr_junk, photoset_id)
+        described_class.new(horrible_raw_flickr_junk, photoset_id, :output_directory => "foo")
       end
     }
 

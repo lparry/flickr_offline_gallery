@@ -1,7 +1,8 @@
 module FlickrOfflineGallery
   class Photo
 
-    def initialize(horrible_flickraw_response_junk, photoset_id = nil)
+    def initialize(horrible_flickraw_response_junk, photoset_id = nil, args = {})
+      @output_directory = args[:output_directory]
       @id = horrible_flickraw_response_junk["id"]
       @photoset_id = photoset_id
       eager_load
@@ -26,9 +27,9 @@ module FlickrOfflineGallery
 
     def local_jpg_path
       if ::FlickrOfflineGallery::Variables.output_directory
-        "#{::FlickrOfflineGallery::Variables.output_directory}/#{::FlickrOfflineGallery::Variables.slug}/#{img_filename}"
+        "#{::FlickrOfflineGallery::Variables.output_directory}/#{@output_directory}/#{img_filename}"
       else
-        "#{::FlickrOfflineGallery::Variables.slug}/#{img_filename}"
+        "#{@output_directory}/#{img_filename}"
       end
     end
 

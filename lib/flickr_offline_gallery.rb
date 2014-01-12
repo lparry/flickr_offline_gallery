@@ -16,7 +16,7 @@ require "flickr_offline_gallery/photoset_index_page"
 module FlickrOfflineGallery
   class Variables
     class << self
-      attr_accessor :slug, :output_directory
+      attr_accessor :output_directory
     end
   end
 
