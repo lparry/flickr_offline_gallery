@@ -2,7 +2,7 @@ module FlickrOfflineGallery
   class Photoset
     def initialize(photoset_id, args = {})
       @photoset_id = photoset_id
-      @output_base_path = args[:output_directory]
+      @output_base_path = args[:output_path]
       eager_load
     end
 
@@ -24,7 +24,7 @@ module FlickrOfflineGallery
       @photos ||= info.photo.map do |raw_response|
         Photo.new(raw_response,
                   :photoset_id => @photoset_id,
-                  :output_directory => photo_output_path)
+                  :output_path => photo_output_path)
       end.tap{::FlickrOfflineGallery.verbose_puts "Finished initializing photoset!"}
     end
 

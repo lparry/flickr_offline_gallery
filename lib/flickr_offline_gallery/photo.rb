@@ -2,7 +2,7 @@ module FlickrOfflineGallery
   class Photo
 
     def initialize(horrible_flickraw_response_junk, args = {})
-      @output_directory = args[:output_directory]
+      @output_path = args[:output_path]
       @id = horrible_flickraw_response_junk["id"]
       @photoset_id = args[:photoset_id]
       eager_load
@@ -30,11 +30,11 @@ module FlickrOfflineGallery
     end
 
     def local_jpg_path
-      "#{@output_directory}/#{img_filename}"
+      "#{@output_path}/#{img_filename}"
     end
 
     def local_html_path
-      "#{@output_directory}/#{html_filename}"
+      "#{@output_path}/#{html_filename}"
     end
 
     def base_url
