@@ -13,22 +13,8 @@ require "flickr_offline_gallery/flickr_a_p_i"
 require "flickr_offline_gallery/template_renderer"
 require "flickr_offline_gallery/photo_page"
 require "flickr_offline_gallery/photoset_index_page"
+require "flickr_offline_gallery/gallery_generator"
 
 module FlickrOfflineGallery
 
-  def self.download(photoset, size = "medium_800")
-    PhotosetDownloader.new(photoset, size).download
-  end
-
-  def self.render_photoset(photoset, size)
-    download(photoset, size)
-    render_photo_pages(photoset)
-    PhotosetIndexPage.new(photoset).write
-  end
-
-  def self.render_photo_pages(photoset)
-    photoset.photos.each do |p|
-      PhotoPage.new(p).write
-    end
-  end
 end
