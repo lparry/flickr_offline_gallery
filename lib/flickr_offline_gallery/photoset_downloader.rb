@@ -1,6 +1,9 @@
 require 'httparty'
 module FlickrOfflineGallery
   class PhotosetDownloader
+
+    include VerbosePuts
+
     def initialize(photoset, size)
       @photoset = photoset
       @size = size
@@ -14,7 +17,7 @@ module FlickrOfflineGallery
 
         unless File.exist?(local_path)
           download_file(url, local_path)
-         ::FlickrOfflineGallery.verbose_puts "Downloaded #{local_path}"
+         verbose_puts "Downloaded #{local_path}"
         end
       end
     end

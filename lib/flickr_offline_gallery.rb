@@ -3,6 +3,7 @@ require 'erb'
 require 'fileutils'
 
 require "flickr_offline_gallery/version"
+require "flickr_offline_gallery/verbose_puts"
 require "flickr_offline_gallery/photo_size"
 require "flickr_offline_gallery/photo_sizes"
 require "flickr_offline_gallery/photo"
@@ -29,11 +30,5 @@ module FlickrOfflineGallery
     photoset.photos.each do |p|
       PhotoPage.new(p).write
     end
-  end
-
-
-  def self.verbose_puts(string)
-    puts(string) if ENV["VERBOSE"]
-    string
   end
 end

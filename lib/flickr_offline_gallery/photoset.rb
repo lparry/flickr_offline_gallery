@@ -1,5 +1,8 @@
 module FlickrOfflineGallery
   class Photoset
+
+    include VerbosePuts
+
     def initialize(photoset_id, args = {})
       @photoset_id = photoset_id
       @output_base_path = args[:output_path]
@@ -20,12 +23,12 @@ module FlickrOfflineGallery
 
     def photos
       raise "photoset has more than 500 images and I'm too lazy to handle that right now" if info.pages > 1
-     ::FlickrOfflineGallery.verbose_puts "Initializing photoset... " unless @photos
+     verbose_puts "Initializing photoset... " unless @photos
       @photos ||= info.photo.map do |raw_response|
         Photo.new(raw_response,
                   :photoset_id => @photoset_id,
                   :output_path => photo_output_path)
-      end.tap{::FlickrOfflineGallery.verbose_puts "Finished initializing photoset!"}
+      end.tap{ verbose_puts "Finished initializing photoset!" }
     end
 
     def index_page_filename

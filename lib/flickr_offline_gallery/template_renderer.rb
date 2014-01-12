@@ -1,5 +1,8 @@
 module FlickrOfflineGallery
   class TemplateRenderer
+
+    include VerbosePuts
+
     def initialize(template)
       @template = template
     end
@@ -33,7 +36,7 @@ module FlickrOfflineGallery
       File.open(filename, 'w') do |file|
         file.write render
       end
-      ::FlickrOfflineGallery.verbose_puts "Wrote out #{filename}"
+      verbose_puts "Wrote out #{filename}"
     end
   end
 end
