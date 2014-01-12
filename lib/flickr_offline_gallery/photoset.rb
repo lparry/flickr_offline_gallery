@@ -24,6 +24,14 @@ module FlickrOfflineGallery
       @photos ||= info.photo.map { |raw_response| Photo.new(raw_response, @photoset_id) }.tap{::FlickrOfflineGallery.verbose_puts "Finished initializing photoset!"}
     end
 
+    def index_page_filename
+      if ::FlickrOfflineGallery::Variables.output_directory
+        "#{::FlickrOfflineGallery::Variables.output_directory}/#{slug}.html"
+      else
+        "#{slug}.html"
+      end
+    end
+
     private
 
     def eager_load

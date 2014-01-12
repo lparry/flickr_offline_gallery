@@ -11,7 +11,7 @@ module FlickrOfflineGallery
     end
 
     def write
-      write_file("#{@photoset.slug}.html")
+      write_file(@photoset.index_page_filename)
     end
   end
 end

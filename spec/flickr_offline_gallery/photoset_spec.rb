@@ -25,6 +25,10 @@ module FlickrOfflineGallery
       photoset.photos.first.title.should == "Purdy lamps"
     end
 
+    it "should have an index page filename" do
+      photoset.index_page_filename.should == "#{Variables.output_directory}/flickr-offline-gallery-specs.html"
+    end
+
   end
 
 end
