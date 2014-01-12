@@ -10,13 +10,13 @@ http_interactions:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - "*/*"
+      - '*/*'
       User-Agent:
       - FlickRaw/0.9.7
       Authorization:
       - OAuth realm="http://api.flickr.com/services/rest/", oauth_consumer_key="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
         oauth_nonce="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", oauth_signature="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-        oauth_signature_method="HMAC-SHA1", oauth_timestamp="1389111850", oauth_token="",
+        oauth_signature_method="HMAC-SHA1", oauth_timestamp="1389533835", oauth_token="",
         oauth_version="1.0"
       Content-Type:
       - application/x-www-form-urlencoded
@@ -26,7 +26,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 07 Jan 2014 16:24:09 GMT
+      - Sun, 12 Jan 2014 13:37:15 GMT
       P3p:
       - policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV
         TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY
@@ -34,11 +34,11 @@ http_interactions:
       Cache-Control:
       - private
       X-Served-By:
-      - www224.flickr.bf1.yahoo.com
+      - www2.flickr.bf1.yahoo.com
       Vary:
       - Accept-Encoding
       Content-Length:
-      - '604'
+      - '603'
       Content-Type:
       - application/json
       Age:
@@ -46,28 +46,26 @@ http_interactions:
       Server:
       - ATS/4.0.2
       Via:
-      - http/1.1 fts123.flickr.bf1.yahoo.com (ApacheTrafficServer/4.0.1 [cMsSf ]),
-        http/1.1 r01.ycpi.dee.yahoo.net (ApacheTrafficServer/4.0.2 [cMsSf ])
+      - http/1.1 fts110.flickr.bf1.yahoo.com (ApacheTrafficServer/4.0.1 [cMsSf ]),
+        http/1.1 r07.ycpi.ams.yahoo.net (ApacheTrafficServer/4.0.2 [cMsSf ])
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: "{\"photo\":{\"id\":\"10440808526\", \"secret\":\"c3fd515635\", \"server\":\"7402\",
-        \"farm\":8, \"dateuploaded\":\"1382539271\", \"isfavorite\":0, \"license\":\"0\",
-        \"safety_level\":\"0\", \"rotation\":0, \"originalsecret\":\"5a2e1d9666\",
-        \"originalformat\":\"jpg\", \"owner\":{\"nsid\":\"83213379@N00\", \"username\":\"Lucas
-        the nomad\", \"realname\":\"\", \"location\":\"Melbourne, Australia\", \"iconserver\":\"7410\",
-        \"iconfarm\":8, \"path_alias\":null}, \"title\":{\"_content\":\"Giant hippo
-        yawn\"}, \"description\":{\"_content\":\"\"}, \"visibility\":{\"ispublic\":1,
-        \"isfriend\":0, \"isfamily\":0}, \"dates\":{\"posted\":\"1382539271\", \"taken\":\"2013-08-13
-        18:27:16\", \"takengranularity\":\"0\", \"lastupdate\":\"1382539314\"}, \"views\":\"37\",
-        \"editability\":{\"cancomment\":0, \"canaddmeta\":0}, \"publiceditability\":{\"cancomment\":1,
-        \"canaddmeta\":0}, \"usage\":{\"candownload\":1, \"canblog\":0, \"canprint\":0,
-        \"canshare\":1}, \"comments\":{\"_content\":\"0\"}, \"notes\":{\"note\":[]},
-        \"people\":{\"haspeople\":0}, \"tags\":{\"tag\":[{\"id\":\"5152225-10440808526-25848\",
-        \"author\":\"83213379@N00\", \"raw\":\"Uganda\", \"_content\":\"uganda\",
-        \"machine_tag\":0}]}, \"urls\":{\"url\":[{\"type\":\"photopage\", \"_content\":\"http:\\/\\/www.flickr.com\\/photos\\/83213379@N00\\/10440808526\\/\"}]},
-        \"media\":\"photo\"}, \"stat\":\"ok\"}"
+      string: '{"photo":{"id":"10440808526", "secret":"c3fd515635", "server":"7402",
+        "farm":8, "dateuploaded":"1382539271", "isfavorite":0, "license":"0", "safety_level":"0",
+        "rotation":0, "originalsecret":"5a2e1d9666", "originalformat":"jpg", "owner":{"nsid":"83213379@N00",
+        "username":"Lucas the nomad", "realname":"", "location":"Melbourne, Australia",
+        "iconserver":"7410", "iconfarm":8, "path_alias":null}, "title":{"_content":"Giant
+        hippo yawn"}, "description":{"_content":""}, "visibility":{"ispublic":1, "isfriend":0,
+        "isfamily":0}, "dates":{"posted":"1382539271", "taken":"2013-08-13 18:27:16",
+        "takengranularity":"0", "lastupdate":"1382539314"}, "views":"38", "editability":{"cancomment":0,
+        "canaddmeta":0}, "publiceditability":{"cancomment":1, "canaddmeta":0}, "usage":{"candownload":1,
+        "canblog":0, "canprint":0, "canshare":1}, "comments":{"_content":"0"}, "notes":{"note":[]},
+        "people":{"haspeople":0}, "tags":{"tag":[{"id":"5152225-10440808526-25848",
+        "author":"83213379@N00", "raw":"Uganda", "_content":"uganda", "machine_tag":0}]},
+        "urls":{"url":[{"type":"photopage", "_content":"http:\/\/www.flickr.com\/photos\/83213379@N00\/10440808526\/"}]},
+        "media":"photo"}, "stat":"ok"}'
     http_version: 
-  recorded_at: Tue, 07 Jan 2014 16:24:10 GMT
+  recorded_at: Sun, 12 Jan 2014 13:37:16 GMT
 recorded_with: VCR 2.8.0

@@ -25,7 +25,11 @@ module FlickrOfflineGallery
     end
 
     def local_jpg_path
-      "#{::FlickrOfflineGallery::Variables.slug}/#{img_filename}"
+      if ::FlickrOfflineGallery::Variables.output_directory
+        "#{::FlickrOfflineGallery::Variables.output_directory}/#{::FlickrOfflineGallery::Variables.slug}/#{img_filename}"
+      else
+        "#{::FlickrOfflineGallery::Variables.slug}/#{img_filename}"
+      end
     end
 
     def local_html_path

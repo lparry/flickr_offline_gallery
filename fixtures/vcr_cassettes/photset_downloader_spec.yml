@@ -6,106 +6,335 @@ http_interactions:
     body:
       encoding: US-ASCII
       string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - '*/*'
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 302
-      message: Moved Temporarily
-    headers:
-      Date:
-      - Tue, 07 Jan 2014 17:24:51 GMT
-      Content-Type:
-      - text/html
-      Content-Length:
-      - '1487'
-      Connection:
-      - keep-alive
-      P3p:
-      - policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV
-        TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY
-        ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
-      Location:
-      - http://farm3.static.flickr.com/2862/11439134074_b97703684d_t.jpg
-      Cache-Control:
-      - private
-      Vary:
-      - Accept-Encoding
-      X-Cache:
-      - MISS from cache430.flickr.ch1.yahoo.com
-      - MISS from photocache104.flickr.bf1.yahoo.com
-      X-Cache-Lookup:
-      - MISS from cache430.flickr.ch1.yahoo.com:81
-      - MISS from photocache104.flickr.bf1.yahoo.com:81
-      Via:
-      - 1.1 photocache104.flickr.bf1.yahoo.com:81 (squid/2.7.STABLE9), 1.1 cache430.flickr.ch1.yahoo.com:81
-        (squid/2.7.STABLE9)
-    body:
-      encoding: UTF-8
-      string: "<!doctype html public \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\">\n<html><head><title>Yahoo!
-        - 302 Found</title><style>\n/* nn4 hide */ \n/*/*/\nbody {font:small/1.2em
-        arial,helvetica,clean,sans-serif;font:x-small;text-align:center;}table {font-size:inherit;font:x-small;}\nhtml>body
-        {font:83%/1.2em arial,helvetica,clean,sans-serif;}input {font-size:100%;vertical-align:middle;}p,
-        form {margin:0;padding:0;}\np {padding-bottom:6px;margin-bottom:10px;}#doc
-        {width:48.5em;margin:0 auto;border:1px solid #fff;text-align:center;}#ygma
-        {text-align:right;margin-bottom:53px}\n#ygma img {float:left;}#ygma div {border-bottom:1px
-        solid #ccc;padding-bottom:8px;margin-left:152px;}#bd {clear:both;text-align:left;width:75%;margin:0
-        auto 20px;}\nh1 {font-size:135%;text-align:center;margin:0 0 15px;}legend
-        {display:none;}fieldset {border:0 solid #fff;padding:.8em 0 .8em 4.5em;}\nform
-        {position:relative;background:#eee;margin-bottom:15px;border:1px solid #ccc;border-width:1px
-        0;}\n#s1p {width:15em;margin-right:.1em;}\nform span {position:absolute;left:70%;top:.8em;}form
-        a {font:78%/1.2em arial;display:block;padding-left:.8em;white-space:nowrap;background:
-        url(http://l.yimg.com/a/i/s/bullet.gif) no-repeat left center;} \nform .sep
-        {display:none;}.more {text-align:center;}#ft {padding-top:10px;border-top:1px
-        solid #999;}#ft p {text-align:center;font:78% arial;}\n/* end nn4 hide */\n</style></head>\n<body><div
-        id=\"doc\">\n<div id=\"ygma\"><a href=\"http://us.rd.yahoo.com/302/*http://www.yahoo.com\"><img
-        src=http://l.yimg.com/a/i/yahoo.gif width=147 height=31 border=0 alt=\"Yahoo!\"></a><div><a
-        href=\"http://us.rd.yahoo.com/302/*http://www.yahoo.com\">Yahoo!</a> - <a
-        href=\"http://us.rd.yahoo.com/302/*http://help.yahoo.com\">Help</a></div></div><div
-        id=\"bd\"><p>The document has moved <a href=\"http://farm3.static.flickr.com/2862/11439134074_b97703684d_t.jpg\">here</a>.</p>\n<p>Please
-        check the URL for proper spelling and capitalization. If\nyou're having trouble
-        locating a destination on Yahoo!, try visiting the\n<strong><a\nhref=\"http://us.rd.yahoo.com/302/*http://www.yahoo.com\">Yahoo!
-        home\npage</a></strong> or look through a list of <strong><a\nhref=\"http://us.rd.yahoo.com/302/*http://docs.yahoo.com/docs/family/more/\">Yahoo!'s\nonline
-        services</a></strong>. Also, you may find what you're looking for\nif you
-        try searching below.</p>\n<form name=\"s1\" action=\"http://us.rd.yahoo.com/302/*-http://search.yahoo.com/search\"><fieldset>\n<legend><label
-        for=\"s1p\">Search the Web</label></legend>\n<input type=\"text\" size=30
-        name=\"p\" id=\"s1p\" title=\"enter search terms here\">\n<input type=\"submit\"
-        value=\"Search\">\n<span><a href=\"http://us.rd.yahoo.com/302/*http://search.yahoo.com/search/options?p=\">advanced
-        search</a> <span class=sep>|</span> <a href=\"http://us.rd.yahoo.com/302/*http://buzz.yahoo.com\">most
-        popular</a></span>\n</fieldset></form>\n<p class=\"more\">Please try <strong><a
-        href=\"http://us.rd.yahoo.com/302/*http://help.yahoo.com\">Yahoo! Help Central</a></strong>
-        if you need more assistance.</p>\n</div><div id=\"ft\"><p>Copyright &copy;
-        2014 Yahoo! Inc. All rights reserved. <a href=\"http://us.rd.yahoo.com/302/*http://privacy.yahoo.com\">Privacy
-        Policy</a> - <a href=\"http://us.rd.yahoo.com/302/*http://docs.yahoo.com/info/terms/\">Terms
-        of Service</a></p></div>\n</div></body></html>\n\n<!-- photocache104.flickr.bf1.yahoo.com
-        Tue Jan  7 17:24:51 UTC 2014 -->\n"
-    http_version: 
-  recorded_at: Tue, 07 Jan 2014 17:24:53 GMT
-- request:
-    method: get
-    uri: http://farm8.staticflickr.com/7359/9579531199_80e975dcbb_t.jpg
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - '*/*'
-      User-Agent:
-      - Ruby
+    headers: {}
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Tue, 07 Jan 2014 17:24:52 GMT
+      - Sun, 12 Jan 2014 13:37:23 GMT
+      Content-Type:
+      - image/jpeg
+      Content-Length:
+      - '12258'
+      Connection:
+      - keep-alive
+      P3p:
+      - policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV
+        TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY
+        ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+      Cache-Control:
+      - max-age=315360000,public
+      Expires:
+      - Fri, 12 Jan 2024 23:26:29 UTC
+      Last-Modified:
+      - Wed, 18 Dec 2013 19:24:02 GMT
+      Accept-Ranges:
+      - bytes
+      X-Cache:
+      - HIT from cache430.flickr.ch1.yahoo.com
+      - MISS from photocache320.flickr.bf1.yahoo.com
+      X-Cache-Lookup:
+      - HIT from cache430.flickr.ch1.yahoo.com:81
+      - MISS from photocache320.flickr.bf1.yahoo.com:81
+      Age:
+      - '1114'
+      Via:
+      - 1.1 photocache320.flickr.bf1.yahoo.com:81 (squid/2.7.STABLE9), 1.1 cache430.flickr.ch1.yahoo.com:81
+        (squid/2.7.STABLE9)
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        /9j/4AAQSkZJRgABAQEASABIAAD/4gxYSUNDX1BST0ZJTEUAAQEAAAxITGlu
+        bwIQAABtbnRyUkdCIFhZWiAHzgACAAkABgAxAABhY3NwTVNGVAAAAABJRUMg
+        c1JHQgAAAAAAAAAAAAAAAAAA9tYAAQAAAADTLUhQICAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABFjcHJ0AAABUAAA
+        ADNkZXNjAAABhAAAAGx3dHB0AAAB8AAAABRia3B0AAACBAAAABRyWFlaAAAC
+        GAAAABRnWFlaAAACLAAAABRiWFlaAAACQAAAABRkbW5kAAACVAAAAHBkbWRk
+        AAACxAAAAIh2dWVkAAADTAAAAIZ2aWV3AAAD1AAAACRsdW1pAAAD+AAAABRt
+        ZWFzAAAEDAAAACR0ZWNoAAAEMAAAAAxyVFJDAAAEPAAACAxnVFJDAAAEPAAA
+        CAxiVFJDAAAEPAAACAx0ZXh0AAAAAENvcHlyaWdodCAoYykgMTk5OCBIZXds
+        ZXR0LVBhY2thcmQgQ29tcGFueQAAZGVzYwAAAAAAAAASc1JHQiBJRUM2MTk2
+        Ni0yLjEAAAAAAAAAAAAAABJzUkdCIElFQzYxOTY2LTIuMQAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWFlaIAAA
+        AAAAAPNRAAEAAAABFsxYWVogAAAAAAAAAAAAAAAAAAAAAFhZWiAAAAAAAABv
+        ogAAOPUAAAOQWFlaIAAAAAAAAGKZAAC3hQAAGNpYWVogAAAAAAAAJKAAAA+E
+        AAC2z2Rlc2MAAAAAAAAAFklFQyBodHRwOi8vd3d3LmllYy5jaAAAAAAAAAAA
+        AAAAFklFQyBodHRwOi8vd3d3LmllYy5jaAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABkZXNjAAAAAAAAAC5JRUMgNjE5
+        NjYtMi4xIERlZmF1bHQgUkdCIGNvbG91ciBzcGFjZSAtIHNSR0IAAAAAAAAA
+        AAAAAC5JRUMgNjE5NjYtMi4xIERlZmF1bHQgUkdCIGNvbG91ciBzcGFjZSAt
+        IHNSR0IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAZGVzYwAAAAAAAAAsUmVmZXJl
+        bmNlIFZpZXdpbmcgQ29uZGl0aW9uIGluIElFQzYxOTY2LTIuMQAAAAAAAAAA
+        AAAALFJlZmVyZW5jZSBWaWV3aW5nIENvbmRpdGlvbiBpbiBJRUM2MTk2Ni0y
+        LjEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHZpZXcAAAAAABOk/gAUXy4A
+        EM8UAAPtzAAEEwsAA1yeAAAAAVhZWiAAAAAAAEwJVgBQAAAAVx/nbWVhcwAA
+        AAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAo8AAAACc2lnIAAAAABDUlQgY3Vy
+        dgAAAAAAAAQAAAAABQAKAA8AFAAZAB4AIwAoAC0AMgA3ADsAQABFAEoATwBU
+        AFkAXgBjAGgAbQByAHcAfACBAIYAiwCQAJUAmgCfAKQAqQCuALIAtwC8AMEA
+        xgDLANAA1QDbAOAA5QDrAPAA9gD7AQEBBwENARMBGQEfASUBKwEyATgBPgFF
+        AUwBUgFZAWABZwFuAXUBfAGDAYsBkgGaAaEBqQGxAbkBwQHJAdEB2QHhAekB
+        8gH6AgMCDAIUAh0CJgIvAjgCQQJLAlQCXQJnAnECegKEAo4CmAKiAqwCtgLB
+        AssC1QLgAusC9QMAAwsDFgMhAy0DOANDA08DWgNmA3IDfgOKA5YDogOuA7oD
+        xwPTA+AD7AP5BAYEEwQgBC0EOwRIBFUEYwRxBH4EjASaBKgEtgTEBNME4QTw
+        BP4FDQUcBSsFOgVJBVgFZwV3BYYFlgWmBbUFxQXVBeUF9gYGBhYGJwY3BkgG
+        WQZqBnsGjAadBq8GwAbRBuMG9QcHBxkHKwc9B08HYQd0B4YHmQesB78H0gfl
+        B/gICwgfCDIIRghaCG4IggiWCKoIvgjSCOcI+wkQCSUJOglPCWQJeQmPCaQJ
+        ugnPCeUJ+woRCicKPQpUCmoKgQqYCq4KxQrcCvMLCwsiCzkLUQtpC4ALmAuw
+        C8gL4Qv5DBIMKgxDDFwMdQyODKcMwAzZDPMNDQ0mDUANWg10DY4NqQ3DDd4N
+        +A4TDi4OSQ5kDn8Omw62DtIO7g8JDyUPQQ9eD3oPlg+zD88P7BAJECYQQxBh
+        EH4QmxC5ENcQ9RETETERTxFtEYwRqhHJEegSBxImEkUSZBKEEqMSwxLjEwMT
+        IxNDE2MTgxOkE8UT5RQGFCcUSRRqFIsUrRTOFPAVEhU0FVYVeBWbFb0V4BYD
+        FiYWSRZsFo8WshbWFvoXHRdBF2UXiReuF9IX9xgbGEAYZRiKGK8Y1Rj6GSAZ
+        RRlrGZEZtxndGgQaKhpRGncanhrFGuwbFBs7G2MbihuyG9ocAhwqHFIcexyj
+        HMwc9R0eHUcdcB2ZHcMd7B4WHkAeah6UHr4e6R8THz4faR+UH78f6iAVIEEg
+        bCCYIMQg8CEcIUghdSGhIc4h+yInIlUigiKvIt0jCiM4I2YjlCPCI/AkHyRN
+        JHwkqyTaJQklOCVoJZclxyX3JicmVyaHJrcm6CcYJ0kneierJ9woDSg/KHEo
+        oijUKQYpOClrKZ0p0CoCKjUqaCqbKs8rAis2K2krnSvRLAUsOSxuLKIs1y0M
+        LUEtdi2rLeEuFi5MLoIuty7uLyQvWi+RL8cv/jA1MGwwpDDbMRIxSjGCMbox
+        8jIqMmMymzLUMw0zRjN/M7gz8TQrNGU0njTYNRM1TTWHNcI1/TY3NnI2rjbp
+        NyQ3YDecN9c4FDhQOIw4yDkFOUI5fzm8Ofk6Njp0OrI67zstO2s7qjvoPCc8
+        ZTykPOM9Ij1hPaE94D4gPmA+oD7gPyE/YT+iP+JAI0BkQKZA50EpQWpBrEHu
+        QjBCckK1QvdDOkN9Q8BEA0RHRIpEzkUSRVVFmkXeRiJGZ0arRvBHNUd7R8BI
+        BUhLSJFI10kdSWNJqUnwSjdKfUrESwxLU0uaS+JMKkxyTLpNAk1KTZNN3E4l
+        Tm5Ot08AT0lPk0/dUCdQcVC7UQZRUFGbUeZSMVJ8UsdTE1NfU6pT9lRCVI9U
+        21UoVXVVwlYPVlxWqVb3V0RXklfgWC9YfVjLWRpZaVm4WgdaVlqmWvVbRVuV
+        W+VcNVyGXNZdJ114XcleGl5sXr1fD19hX7NgBWBXYKpg/GFPYaJh9WJJYpxi
+        8GNDY5dj62RAZJRk6WU9ZZJl52Y9ZpJm6Gc9Z5Nn6Wg/aJZo7GlDaZpp8WpI
+        ap9q92tPa6dr/2xXbK9tCG1gbbluEm5rbsRvHm94b9FwK3CGcOBxOnGVcfBy
+        S3KmcwFzXXO4dBR0cHTMdSh1hXXhdj52m3b4d1Z3s3gReG54zHkqeYl553pG
+        eqV7BHtje8J8IXyBfOF9QX2hfgF+Yn7CfyN/hH/lgEeAqIEKgWuBzYIwgpKC
+        9INXg7qEHYSAhOOFR4Wrhg6GcobXhzuHn4gEiGmIzokziZmJ/opkisqLMIuW
+        i/yMY4zKjTGNmI3/jmaOzo82j56QBpBukNaRP5GokhGSepLjk02TtpQglIqU
+        9JVflcmWNJaflwqXdZfgmEyYuJkkmZCZ/JpomtWbQpuvnByciZz3nWSd0p5A
+        nq6fHZ+Ln/qgaaDYoUehtqImopajBqN2o+akVqTHpTilqaYapoum/adup+Co
+        UqjEqTepqaocqo+rAqt1q+msXKzQrUStuK4trqGvFq+LsACwdbDqsWCx1rJL
+        ssKzOLOutCW0nLUTtYq2AbZ5tvC3aLfguFm40blKucK6O7q1uy67p7whvJu9
+        Fb2Pvgq+hL7/v3q/9cBwwOzBZ8Hjwl/C28NYw9TEUcTOxUvFyMZGxsPHQce/
+        yD3IvMk6ybnKOMq3yzbLtsw1zLXNNc21zjbOts83z7jQOdC60TzRvtI/0sHT
+        RNPG1EnUy9VO1dHWVdbY11zX4Nhk2OjZbNnx2nba+9uA3AXcit0Q3ZbeHN6i
+        3ynfr+A24L3hROHM4lPi2+Nj4+vkc+T85YTmDeaW5x/nqegy6LzpRunQ6lvq
+        5etw6/vshu0R7ZzuKO6070DvzPBY8OXxcvH/8ozzGfOn9DT0wvVQ9d72bfb7
+        94r4Gfio+Tj5x/pX+uf7d/wH/Jj9Kf26/kv+3P9t////2wBDAAMCAgMCAgMD
+        AwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUV
+        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
+        /X1cp1SSUjYVQhAUkKPNf//Z
+    http_version: 
+  recorded_at: Sun, 12 Jan 2014 13:37:24 GMT
+- request:
+    method: get
+    uri: http://farm8.staticflickr.com/7359/9579531199_80e975dcbb_t.jpg
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 12 Jan 2014 13:37:24 GMT
       Content-Type:
       - image/jpeg
       Content-Length:
@@ -119,7 +348,7 @@ http_interactions:
       Cache-Control:
       - max-age=315360000,public
       Expires:
-      - Mon, 08 Jan 2024 03:27:39 UTC
+      - Fri, 12 Jan 2024 23:26:32 UTC
       Last-Modified:
       - Sat, 24 Aug 2013 09:04:13 GMT
       Accept-Ranges:
@@ -131,7 +360,7 @@ http_interactions:
       - HIT from cache407.flickr.ch1.yahoo.com:81
       - MISS from photocache807.flickr.bf1.yahoo.com:81
       Age:
-      - '293'
+      - '1112'
       Via:
       - 1.1 photocache807.flickr.bf1.yahoo.com:81 (squid/2.7.STABLE9), 1.1 cache407.flickr.ch1.yahoo.com:81
         (squid/2.7.STABLE9)
@@ -306,27 +535,21 @@ http_interactions:
         yJo18K7wHt8SmdNY6H/U8RosutnFvlWL62lQbQwSsTbMufhthZc/yDz+3SXU
         hNil18JSpPy+IByMyORiQv/Z
     http_version: 
-  recorded_at: Tue, 07 Jan 2014 17:24:53 GMT
+  recorded_at: Sun, 12 Jan 2014 13:37:24 GMT
 - request:
     method: get
     uri: http://farm8.staticflickr.com/7402/10440808526_c3fd515635_t.jpg
     body:
       encoding: US-ASCII
       string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - '*/*'
-      User-Agent:
-      - Ruby
+    headers: {}
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Tue, 07 Jan 2014 17:24:52 GMT
+      - Sun, 12 Jan 2014 13:37:25 GMT
       Content-Type:
       - image/jpeg
       Content-Length:
@@ -340,7 +563,7 @@ http_interactions:
       Cache-Control:
       - max-age=315360000,public
       Expires:
-      - Mon, 08 Jan 2024 03:27:41 UTC
+      - Fri, 12 Jan 2024 23:26:34 UTC
       Last-Modified:
       - Wed, 23 Oct 2013 14:41:14 GMT
       Accept-Ranges:
@@ -352,7 +575,7 @@ http_interactions:
       - HIT from cache404.flickr.ch1.yahoo.com:81
       - MISS from photocache819.flickr.bf1.yahoo.com:81
       Age:
-      - '291'
+      - '1111'
       Via:
       - 1.1 photocache819.flickr.bf1.yahoo.com:81 (squid/2.7.STABLE9), 1.1 cache404.flickr.ch1.yahoo.com:81
         (squid/2.7.STABLE9)
@@ -541,27 +764,21 @@ http_interactions:
         HBGrgQol89DDKHLKd39QYg9/cHQloUSCvmeBJApB2qCCwDHv7nSJIUSGOrme
         NWMjZJbODj8xH+mgLj1VwF//2Q==
     http_version: 
-  recorded_at: Tue, 07 Jan 2014 17:24:53 GMT
+  recorded_at: Sun, 12 Jan 2014 13:37:25 GMT
 - request:
     method: get
     uri: http://farm8.staticflickr.com/7314/11224643544_18c3674fbe_t.jpg
     body:
       encoding: US-ASCII
       string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - '*/*'
-      User-Agent:
-      - Ruby
+    headers: {}
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Tue, 07 Jan 2014 17:24:52 GMT
+      - Sun, 12 Jan 2014 13:37:25 GMT
       Content-Type:
       - image/jpeg
       Content-Length:
@@ -587,7 +804,7 @@ http_interactions:
       - HIT from cache412.flickr.ch1.yahoo.com:81
       - HIT from photocache817.flickr.bf1.yahoo.com:85
       Age:
-      - '2592152'
+      - '3010505'
       Via:
       - 1.1 photocache817.flickr.bf1.yahoo.com:85 (squid/2.7.STABLE9), 1.1 cache412.flickr.ch1.yahoo.com:81
         (squid/2.7.STABLE9)
@@ -808,5 +1025,5 @@ http_interactions:
         EFCgfBQgUf8AQHW5sLW9lMdWKViMkIHqc0heTLn4jjn+h1ssCArArFlBY5P8
         nqSoX//Z
     http_version: 
-  recorded_at: Tue, 07 Jan 2014 17:24:54 GMT
+  recorded_at: Sun, 12 Jan 2014 13:37:25 GMT
 recorded_with: VCR 2.8.0

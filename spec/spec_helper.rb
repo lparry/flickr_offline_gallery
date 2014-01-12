@@ -4,10 +4,19 @@
 # loaded once.
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+GEM_ROOT = File.expand_path("../..", __FILE__)
+SPEC_TMP_DIR = File.join(GEM_ROOT, "tmp", "spec")
+
 RSpec.configure do |config|
   config.treat_symbols_as_metadata_keys_with_true_values = true
   config.run_all_when_everything_filtered = true
   config.filter_run :focus
+
+  config.before(:each) do
+    # clean out any created files between every test
+    FileUtils.rm_rf(SPEC_TMP_DIR)
+    FileUtils.mkdir_p(SPEC_TMP_DIR)
+  end
 
   # Run specs in random order to surface order dependencies. If you find an
   # order dependency and want to debug it, you can fix the order by providing
@@ -21,7 +30,6 @@ require 'pry-rescue'
 require 'flickraw'
 require 'flickr_offline_gallery'
 
-GEM_ROOT = File.expand_path("../..", __FILE__)
 
 if  ENV["FLICKR_OFFLINE_GALLERY_SPEC_API_KEY"] && ENV["FLICKR_OFFLINE_GALLERY_SPEC_SHARED_SECRET"]
   FlickRaw.api_key =       ENV["FLICKR_OFFLINE_GALLERY_SPEC_API_KEY"]
@@ -67,3 +75,5 @@ end
 VCR.use_cassette('init') do
   FlickrOfflineGallery::FlickrAPI.instance
 end
+
+FlickrOfflineGallery::Variables.output_directory = SPEC_TMP_DIR
