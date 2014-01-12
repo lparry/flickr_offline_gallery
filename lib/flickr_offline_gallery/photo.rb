@@ -1,10 +1,10 @@
 module FlickrOfflineGallery
   class Photo
 
-    def initialize(horrible_flickraw_response_junk, photoset_id = nil, args = {})
+    def initialize(horrible_flickraw_response_junk, args = {})
       @output_directory = args[:output_directory]
       @id = horrible_flickraw_response_junk["id"]
-      @photoset_id = photoset_id
+      @photoset_id = args[:photoset_id]
       eager_load
      ::FlickrOfflineGallery.verbose_puts %(Fetched data about photo #{@id}: "#{title}")
     end

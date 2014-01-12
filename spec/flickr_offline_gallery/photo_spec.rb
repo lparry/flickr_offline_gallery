@@ -14,7 +14,7 @@ module FlickrOfflineGallery
     subject!(:photo) {
 
       VCR.use_cassette('full_photo_sizes') do
-        described_class.new(horrible_raw_flickr_junk, photoset_id, :output_directory => "#{SPEC_TMP_DIR}/foo")
+        described_class.new(horrible_raw_flickr_junk, :photoset_id => photoset_id, :output_directory => "#{SPEC_TMP_DIR}/foo")
       end
     }
 
