@@ -15,7 +15,9 @@ module FlickrOfflineGallery
     end
 
     it 'should download' do
-      photoset_downloader.download
+      VCR.use_cassette('photset_downloader_spec') do
+        photoset_downloader.download
+      end
       File.exist?(photoset.photos[0].local_jpg_path).should be_true
     end
 
