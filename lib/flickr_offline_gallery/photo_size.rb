@@ -1,13 +1,13 @@
 module FlickrOfflineGallery
   class PhotoSize
 
-    attr_reader :label, :width, :height, :source
+    attr_reader :label, :width, :height, :url
 
     def initialize(flickraw_response)
       @label  = flickraw_response.label
       @height = flickraw_response.height
       @width  = flickraw_response.width
-      @source = flickraw_response.source
+      @url = flickraw_response.source
     end
 
     def key

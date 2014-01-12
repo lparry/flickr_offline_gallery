@@ -46,13 +46,13 @@
     </style>
   </head>
 <body>
-  <img src="<%= source %>" />
+  <img src="<%= image_url %>" />
   <span class="right-panel">
     <span class="html-snippets">
       <% sizes.each do |size| %>
       <span class="snippet" id="<%= size.key %>">
         <h4><%= size.label %></h4>
-        <textarea>&lt;a href="<%= photo_url %>" title="<%= title %> by <%= author %>, on Flickr"&gt;&lt;img src="<%= size.source %>" width="<%= size.width %>" height="<%= size.height %>" alt="<%= title %>"&gt;&lt;/a&gt;</textarea>
+        <textarea>&lt;a href="<%= photo_page_url %>" title="<%= title %> by <%= author %>, on Flickr"&gt;&lt;img src="<%= size.url %>" width="<%= size.width %>" height="<%= size.height %>" alt="<%= title %>"&gt;&lt;/a&gt;</textarea>
       </span>
       <% end %>
     </span>

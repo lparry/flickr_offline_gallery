@@ -11,7 +11,7 @@ module FlickrOfflineGallery
 
     def download
       photos.each do |photo|
-        url = photo.sizes[@size].source
+        url = photo.sizes[@size].url
         local_path = photo.local_jpg_path
         FileUtils.mkdir_p(File.dirname(local_path))
 

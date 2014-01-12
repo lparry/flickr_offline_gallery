@@ -22,7 +22,7 @@ module FlickrOfflineGallery
     end
 
     it "should should know its url" do
-      size.source.should == "http://farm8.staticflickr.com/7402/10440808526_c3fd515635_t.jpg"
+      size.url.should == "http://farm8.staticflickr.com/7402/10440808526_c3fd515635_t.jpg"
     end
 
     it 'should know its filename friendly key' do

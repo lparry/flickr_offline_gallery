@@ -8,9 +8,9 @@ module FlickrOfflineGallery
 
     def render
       render_erb(:index_page => @photo.local_html_path.sub(/\/.*/, ".html"),
-            :source => @photo.img_filename,
+            :image_url => @photo.img_filename,
             :sizes => @photo.sizes,
-            :photo_url => @photo.url,
+            :photo_page_url => @photo.url,
             :title => @photo.title,
             :author => @photo.author)
     end
