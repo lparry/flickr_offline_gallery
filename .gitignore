@@ -22,6 +22,7 @@ bin/demo-pry-bond
 bin/demo-pry-exception_explorer
 bin/demo-pry-rescue
 bin/htmldiff
+bin/httparty
 bin/jist
 bin/kill-pry-rescue
 bin/ldiff

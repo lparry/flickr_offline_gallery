@@ -1,4 +1,4 @@
-require 'net/http'
+require 'httparty'
 module FlickrOfflineGallery
   class PhotosetDownloader
     def initialize(photoset, size)
@@ -13,7 +13,6 @@ module FlickrOfflineGallery
         FileUtils.mkdir_p(File.dirname(local_path))
 
         unless File.exist?(local_path)
-          #TODO: this is lazy, so sue me
           download_file(url, local_path)
          ::FlickrOfflineGallery.verbose_puts "Downloaded #{local_path}"
         end
@@ -27,13 +26,16 @@ module FlickrOfflineGallery
     end
 
     def download_file(url, destination)
-      uri = URI.parse(url)
-      Net::HTTP.start(uri.host,uri.port) do |http|
-        resp = http.get(uri.path)
-        File.open(destination, "wb") do |file|
-          file.write(resp.body)
-        end
+      resp = http_get(url)
+      File.open(destination, "wb") do |file|
+        file.write(resp.body)
       end
+    end
+
+    def http_get(url)
+      response = HTTParty.get(url)
+      raise "unhandled response code: #{response.code}" unless response.code == 200
+      response
     end
 
   end
