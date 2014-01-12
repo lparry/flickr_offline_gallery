@@ -25,12 +25,16 @@ module FlickrOfflineGallery
       "#{@id}.jpg"
     end
 
+    def html_filename
+      "#{@id}.html"
+    end
+
     def local_jpg_path
       "#{@output_directory}/#{img_filename}"
     end
 
     def local_html_path
-      local_jpg_path.sub(/\.jpg$/, ".html")
+      "#{@output_directory}/#{html_filename}"
     end
 
     def base_url
