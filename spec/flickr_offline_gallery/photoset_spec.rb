@@ -4,7 +4,8 @@ module FlickrOfflineGallery
   describe Photoset do
     subject(:photoset) do
       VCR.use_cassette('photoset') do
-        described_class.new("72157639475533743")
+        described_class.new("72157639475533743",
+                           :output_directory => SPEC_TMP_DIR)
       end
     end
 
@@ -26,7 +27,7 @@ module FlickrOfflineGallery
     end
 
     it "should have an index page filename" do
-      photoset.index_page_filename.should == "#{Variables.output_directory}/flickr-offline-gallery-specs.html"
+      photoset.index_page_filename.should == "#{SPEC_TMP_DIR}/flickr-offline-gallery-specs.html"
     end
 
   end

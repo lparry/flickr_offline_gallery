@@ -1,7 +1,8 @@
 module FlickrOfflineGallery
   class Photoset
-    def initialize(photoset_id)
+    def initialize(photoset_id, args = {})
       @photoset_id = photoset_id
+      @output_base_path = args[:output_directory]
       eager_load
     end
 
@@ -32,8 +33,8 @@ module FlickrOfflineGallery
     end
 
     def photo_output_path
-      if Variables.output_directory
-        File.join(Variables.output_directory, slug)
+      if @output_base_path
+        File.join(@output_base_path, slug)
       else
         slug
       end

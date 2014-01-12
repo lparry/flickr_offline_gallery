@@ -3,7 +3,8 @@ require 'spec_helper'
 describe FlickrOfflineGallery do
   subject!(:photoset) do
     VCR.use_cassette('photoset') do
-      FlickrOfflineGallery::Photoset.new("72157639475533743")
+      FlickrOfflineGallery::Photoset.new("72157639475533743",
+                                        :output_directory => SPEC_TMP_DIR)
     end
   end
 

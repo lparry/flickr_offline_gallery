@@ -75,5 +75,3 @@ end
 VCR.use_cassette('init') do
   FlickrOfflineGallery::FlickrAPI.instance
 end
-
-FlickrOfflineGallery::Variables.output_directory = SPEC_TMP_DIR
