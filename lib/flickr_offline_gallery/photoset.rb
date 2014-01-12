@@ -2,6 +2,7 @@ module FlickrOfflineGallery
   class Photoset
     def initialize(photoset_id)
       @photoset_id = photoset_id
+      eager_load
       ::FlickrOfflineGallery::Variables.slug = slug
     end
 
@@ -14,19 +15,24 @@ module FlickrOfflineGallery
     end
 
     def slug
-      title.downcase.gsub(/[^a-z0-9]/, "-").gsub(/-+/, "-")
+      title.downcase.tr_s("^a-z0-9", "-")
     end
 
     def photos
       raise "photoset has more than 500 images and I'm too lazy to handle that right now" if info.pages > 1
-      puts "Initializing photoset... " unless @photos
-      @photos ||= info.photo.map { |raw_response| Photo.new(raw_response, @photoset_id) }.tap{ puts "Finished initializing photoset!"}
+     ::FlickrOfflineGallery.verbose_puts "Initializing photoset... " unless @photos
+      @photos ||= info.photo.map { |raw_response| Photo.new(raw_response, @photoset_id) }.tap{::FlickrOfflineGallery.verbose_puts "Finished initializing photoset!"}
     end
 
     private
 
+    def eager_load
+      info
+      photos
+    end
+
     def info
-      @info ||= OpenStruct.new(Flickr.get_photoset(@photoset_id))
+      @info ||= OpenStruct.new(FlickrAPI.get_photoset(@photoset_id))
     end
   end
 end

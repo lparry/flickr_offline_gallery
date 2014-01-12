@@ -1,5 +1,5 @@
 module FlickrOfflineGallery
-  class Flickr
+  class FlickrAPI
     def self.instance
       @instance ||= FlickRaw::Flickr.new
     end
