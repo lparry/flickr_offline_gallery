@@ -13,7 +13,7 @@
 <body>
 <h1><%= photoset.title %> by <%= photoset.username %></h1>
 <% photos.each do |photo| %>
-  <a href="<%= photo.full_html_path %>"><img src="<%= photo.full_jpg_path %>"
+  <a href="<%= photo.relative_html_path %>"><img src="<%= photo.relative_jpg_path %>"
   /></a>
 <% end %>
 </body>

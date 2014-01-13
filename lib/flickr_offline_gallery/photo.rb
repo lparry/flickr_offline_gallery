@@ -46,6 +46,10 @@ module FlickrOfflineGallery
       @path_manager.relative_path_for(@id, :html)
     end
 
+    def back_to_index_url
+      @path_manager.back_to_index
+    end
+
     def sizes
       @size ||= PhotoSizes.new(raw_sizes.to_a)
     end
