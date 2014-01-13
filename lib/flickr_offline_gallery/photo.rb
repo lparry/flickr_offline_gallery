@@ -34,11 +34,11 @@ module FlickrOfflineGallery
       "#{@id}.html"
     end
 
-    def local_jpg_path
+    def full_jpg_path
       @path_manager.full_path_for(@id, :jpg)
     end
 
-    def local_html_path
+    def full_html_path
       @path_manager.full_path_for(@id, :html)
     end
 

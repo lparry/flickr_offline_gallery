@@ -32,12 +32,12 @@ module FlickrOfflineGallery
       photo.img_filename.should == "10440808526.jpg"
     end
 
-    it "should have a local_jpg_path" do
-      photo.local_jpg_path.should == "#{SPEC_TMP_DIR}/foo/10440808526.jpg"
+    it "should have a full_jpg_path" do
+      photo.full_jpg_path.should == "#{SPEC_TMP_DIR}/foo/10440808526.jpg"
     end
 
-    it "should have a local_html_path" do
-      photo.local_html_path.should == "#{SPEC_TMP_DIR}/foo/10440808526.html"
+    it "should have a full_html_path" do
+      photo.full_html_path.should == "#{SPEC_TMP_DIR}/foo/10440808526.html"
     end
 
     it "should have a base_url" do
