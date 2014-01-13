@@ -19,10 +19,5 @@ module FlickrOfflineGallery
     it "should respond to #each" do
       sizes.should respond_to(:each)
     end
-
-    it "should be an openstuct (I hate this already, it'll be the first to go once the specs are done)" do
-      sizes.thumbnail.should be_a(PhotoSize)
-      sizes["thumbnail"].label.should == "Thumbnail"
-    end
   end
 end
