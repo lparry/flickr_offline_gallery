@@ -27,23 +27,19 @@ module FlickrOfflineGallery
       @photos ||= info.photo.map do |raw_response|
         Photo.new(raw_response,
                   :photoset_id => @photoset_id,
-                  :output_path => photo_output_path)
+                  :path_manager => path_manager)
       end.tap{ verbose_puts "Finished initializing photoset!" }
     end
 
     def index_page_filename
-      "#{photo_output_path}.html"
-    end
-
-    def photo_output_path
-      if @output_base_path
-        File.join(@output_base_path, slug)
-      else
-        slug
-      end
+      path_manager.index_page
     end
 
     private
+
+    def path_manager
+      PathManager.new(@output_base_path, slug)
+    end
 
     def eager_load
       info

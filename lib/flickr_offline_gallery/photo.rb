@@ -3,7 +3,7 @@ module FlickrOfflineGallery
     include VerbosePuts
 
     def initialize(horrible_flickraw_response_junk, args = {})
-      @output_path = args[:output_path]
+      @path_manager = args[:path_manager]
       @id = horrible_flickraw_response_junk["id"]
       @photoset_id = args[:photoset_id]
       eager_load
@@ -22,8 +22,12 @@ module FlickrOfflineGallery
       end
     end
 
+    def base_url
+      @base_url ||= info.urls.find{|u| u["type"] == "photopage"}["_content"]
+    end
+
     def img_filename
-      "#{@id}.jpg"
+      @path_manager.filename_for_photo(@id, :jpg)
     end
 
     def html_filename
@@ -31,16 +35,13 @@ module FlickrOfflineGallery
     end
 
     def local_jpg_path
-      "#{@output_path}/#{img_filename}"
+      @path_manager.full_path_for(@id, :jpg)
     end
 
     def local_html_path
-      "#{@output_path}/#{html_filename}"
+      @path_manager.full_path_for(@id, :html)
     end
 
-    def base_url
-      @base_url ||= info.urls.find{|u| u["type"] == "photopage"}["_content"]
-    end
 
     def sizes
       @size ||= PhotoSizes.new(raw_sizes.to_a)
