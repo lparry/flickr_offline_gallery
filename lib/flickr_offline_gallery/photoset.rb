@@ -5,7 +5,7 @@ module FlickrOfflineGallery
 
     def initialize(photoset_id, args = {})
       @photoset_id = photoset_id
-      @output_base_path = args[:output_path]
+      @output_base_path = args[:output_path] || "."
       eager_load
     end
 
