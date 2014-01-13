@@ -39,7 +39,7 @@ module FlickrOfflineGallery
     end
 
     it "should write the results of the render method to a file" do
-      File.delete(test_filename)
+      FileUtils.rm_f(test_filename)
 
       renderer.should_receive(:render).and_return(template_contents)
 
