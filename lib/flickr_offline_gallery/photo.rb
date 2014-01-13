@@ -30,10 +30,6 @@ module FlickrOfflineGallery
       @path_manager.filename_for_photo(@id, :jpg)
     end
 
-    def html_filename
-      "#{@id}.html"
-    end
-
     def full_jpg_path
       @path_manager.full_path_for(@id, :jpg)
     end
@@ -42,6 +38,13 @@ module FlickrOfflineGallery
       @path_manager.full_path_for(@id, :html)
     end
 
+    def relative_jpg_path
+      @path_manager.relative_path_for(@id, :jpg)
+    end
+
+    def relative_html_path
+      @path_manager.relative_path_for(@id, :html)
+    end
 
     def sizes
       @size ||= PhotoSizes.new(raw_sizes.to_a)
