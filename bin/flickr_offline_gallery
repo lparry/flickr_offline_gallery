@@ -20,4 +20,4 @@ if ARGV.size == 0
 end
 
 photoset = FlickrOfflineGallery::Photoset.new(ARGV[0])
-FlickrOfflineGallery.render_photoset(photoset, ARGV[1] || "medium_800")
+FlickrOfflineGallery::GalleryGenerator.new(photoset).render_photoset(ARGV[1] || "medium_800")
