@@ -1,4 +1,6 @@
 require 'httparty'
+require "thread/pool"
+
 module FlickrOfflineGallery
   class PhotosetDownloader
 
@@ -10,16 +12,20 @@ module FlickrOfflineGallery
     end
 
     def download
+      pool = Thread.pool(ENV["FLICKR_OFFLINE_GALLERY_DOWNLOAD_THREADPOOL_SIZE"] || 4)
       photos.each do |photo|
-        url = photo.sizes[@size].url
-        local_path = photo.full_jpg_path
-        FileUtils.mkdir_p(File.dirname(local_path))
+        pool.process do
+          url = photo.sizes[@size].url
+          local_path = photo.full_jpg_path
+          FileUtils.mkdir_p(File.dirname(local_path))
 
-        unless File.exist?(local_path)
-          download_file(url, local_path)
-         verbose_puts "Downloaded #{local_path}"
+          unless File.exist?(local_path)
+            download_file(url, local_path)
+            verbose_puts "Downloaded #{local_path}"
+          end
         end
       end
+      pool.shutdown
     end
 
     private

@@ -1,3 +1,5 @@
+require "thread/pool"
+
 module FlickrOfflineGallery
   class Photoset
 
@@ -26,16 +28,21 @@ module FlickrOfflineGallery
       return @photos if @photos
      verbose_puts "Initializing photoset... "
       total_photos = info.photo.size
+      pool = Thread.pool(ENV["FLICKR_OFFLINE_GALLERY_METADATA_THREADPOOL_SIZE"] || 20)
       @photos = []
-      info.photo.each do |raw_response|
-        photo = Photo.new(raw_response,
-                          :photoset_id => @photoset_id,
-                          :path_manager => path_manager)
-        @photos << photo
-      verbose_puts %(Fetched (#{@photos.size}/#{total_photos}) "#{photo.title}" (#{photo.id}))
+      info.photo.each_with_index do |raw_response, index|
+        pool.process do
+          photo = Photo.new(raw_response,
+                            :photoset_id => @photoset_id,
+                            :path_manager => path_manager)
+          @photos << [index, photo]
+          verbose_puts %(Fetched (#{@photos.size}/#{total_photos}) "#{photo.title}" (#{photo.id}))
+        end
       end
+      pool.shutdown
       verbose_puts "Finished initializing photoset!"
-      @photos
+      @photos.sort_by!(&:first)
+      @photos.map!(&:last)
     end
 
     def index_page_filename
