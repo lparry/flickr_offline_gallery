@@ -23,12 +23,19 @@ module FlickrOfflineGallery
 
     def photos
       raise "photoset has more than 500 images and I'm too lazy to handle that right now" if info.pages > 1
-     verbose_puts "Initializing photoset... " unless @photos
-      @photos ||= info.photo.map do |raw_response|
-        Photo.new(raw_response,
-                  :photoset_id => @photoset_id,
-                  :path_manager => path_manager)
-      end.tap{ verbose_puts "Finished initializing photoset!" }
+      return @photos if @photos
+     verbose_puts "Initializing photoset... "
+      total_photos = info.photo.size
+      @photos = []
+      info.photo.each do |raw_response|
+        photo = Photo.new(raw_response,
+                          :photoset_id => @photoset_id,
+                          :path_manager => path_manager)
+        @photos << photo
+      verbose_puts %(Fetched (#{@photos.size}/#{total_photos}) "#{photo.title}" (#{photo.id}))
+      end
+      verbose_puts "Finished initializing photoset!"
+      @photos
     end
 
     def index_page_filename

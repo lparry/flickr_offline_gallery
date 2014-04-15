@@ -2,12 +2,13 @@ module FlickrOfflineGallery
   class Photo
     include VerbosePuts
 
+    attr_reader :id
+
     def initialize(horrible_flickraw_response_junk, args = {})
       @path_manager = args[:path_manager]
       @id = horrible_flickraw_response_junk["id"]
       @photoset_id = args[:photoset_id]
       eager_load
-      verbose_puts %(Fetched data about photo #{@id}: "#{title}")
     end
 
     def title
