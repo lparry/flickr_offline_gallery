@@ -12,12 +12,12 @@ module FlickrOfflineGallery
     subject!(:sizes) { described_class.new(raw_flickr_response) }
 
     it "should allow access like an array" do
-      sizes["thumbnail"].should be_a(PhotoSize)
-      sizes["thumbnail"].label.should == "Thumbnail"
+      expect(sizes["thumbnail"]).to be_a(PhotoSize)
+      expect(sizes["thumbnail"].label).to eq("Thumbnail")
     end
 
     it "should respond to #each" do
-      sizes.should respond_to(:each)
+      expect(sizes).to respond_to(:each)
     end
   end
 end

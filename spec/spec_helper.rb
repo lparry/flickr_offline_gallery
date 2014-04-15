@@ -12,6 +12,11 @@ RSpec.configure do |config|
   config.run_all_when_everything_filtered = true
   config.filter_run :focus
 
+  config.expect_with :rspec do |c|
+    # disable the `should` syntax...
+    c.syntax = :expect
+  end
+
   config.before(:each) do
     # clean out any created files between every test
     FileUtils.rm_rf(SPEC_TMP_DIR)

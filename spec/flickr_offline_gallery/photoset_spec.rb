@@ -10,24 +10,24 @@ module FlickrOfflineGallery
     end
 
     it 'should have a username' do
-      photoset.username.should == "Lucas the nomad"
+      expect(photoset.username).to eq("Lucas the nomad")
     end
 
     it 'should have a title' do
-      photoset.title.should == "flickr_offline_gallery specs"
+      expect(photoset.title).to eq("flickr_offline_gallery specs")
     end
 
     it 'should have a slug' do
-      photoset.slug.should == "flickr-offline-gallery-specs"
+      expect(photoset.slug).to eq("flickr-offline-gallery-specs")
     end
 
     it 'should have a photos' do
-      photoset.photos.count.should == 4
-      photoset.photos.first.title.should == "Purdy lamps"
+      expect(photoset.photos.count).to eq(4)
+      expect(photoset.photos.first.title).to eq("Purdy lamps")
     end
 
     it "should have an index page filename" do
-      photoset.index_page_filename.should == "#{SPEC_TMP_DIR}/flickr-offline-gallery-specs.html"
+      expect(photoset.index_page_filename).to eq("#{SPEC_TMP_DIR}/flickr-offline-gallery-specs.html")
     end
 
   end

@@ -16,9 +16,9 @@ module FlickrOfflineGallery
       VCR.use_cassette('image_downloads') do
         generator.render_photoset("medium")
       end
-      Dir.glob(File.join(SPEC_TMP_DIR, "**", "*")).map do |path|
+      expect(Dir.glob(File.join(SPEC_TMP_DIR, "**", "*")).map do |path|
         path.sub(SPEC_TMP_DIR, '')
-      end.should == [ "/flickr-offline-gallery-specs",
+      end).to     eq(["/flickr-offline-gallery-specs",
                       "/flickr-offline-gallery-specs/10440808526.html",
                       "/flickr-offline-gallery-specs/10440808526.jpg",
                       "/flickr-offline-gallery-specs/11224643544.html",
@@ -27,7 +27,7 @@ module FlickrOfflineGallery
                       "/flickr-offline-gallery-specs/11439134074.jpg",
                       "/flickr-offline-gallery-specs/9579531199.html",
                       "/flickr-offline-gallery-specs/9579531199.jpg",
-                      "/flickr-offline-gallery-specs.html"]
+                      "/flickr-offline-gallery-specs.html"])
     end
 
   end

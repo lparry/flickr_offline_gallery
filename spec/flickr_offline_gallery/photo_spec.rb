@@ -24,15 +24,15 @@ module FlickrOfflineGallery
     }
 
     it "should have a title" do
-      photo.title.should == "Giant hippo yawn"
+      expect(photo.title).to eq("Giant hippo yawn")
     end
 
     it "should have a url" do
-      photo.url.should == "http://www.flickr.com/photos/83213379@N00/10440808526/in/set-ffff"
+      expect(photo.url).to eq("http://www.flickr.com/photos/83213379@N00/10440808526/in/set-ffff")
     end
 
     it "should have a base_url" do
-      photo.base_url.should == "http://www.flickr.com/photos/83213379@N00/10440808526/"
+      expect(photo.base_url).to eq("http://www.flickr.com/photos/83213379@N00/10440808526/")
     end
 
     context "delegating path work to the path manager" do
@@ -70,11 +70,11 @@ module FlickrOfflineGallery
     end
 
     it "should have sizes" do
-      photo.sizes.should be_a(PhotoSizes)
+      expect(photo.sizes).to be_a(PhotoSizes)
     end
 
     it "should have a author" do
-      photo.author.should == "Lucas the nomad"
+      expect(photo.author).to eq("Lucas the nomad")
     end
 
   end

@@ -8,26 +8,26 @@ module FlickrOfflineGallery
     subject(:path_manager) { described_class.new(base_path, slug) }
 
     it "should have an index page named the same as the slug" do
-      path_manager.index_page.should ==  "/tmp/galleries/holiday-photos.html"
+      expect(path_manager.index_page).to eq( "/tmp/galleries/holiday-photos.html")
     end
 
     it "should put photos and their pages in a common folder" do
-      path_manager.photo_output_path.should ==  "/tmp/galleries/holiday-photos"
-      path_manager.full_path_for(photo_id, :jpg).should ==  "/tmp/galleries/holiday-photos/1235645.jpg"
-      path_manager.full_path_for(photo_id, :html).should == "/tmp/galleries/holiday-photos/1235645.html"
+      expect(path_manager.photo_output_path).to eq( "/tmp/galleries/holiday-photos")
+      expect(path_manager.full_path_for(photo_id, :jpg)).to eq( "/tmp/galleries/holiday-photos/1235645.jpg")
+      expect(path_manager.full_path_for(photo_id, :html)).to eq("/tmp/galleries/holiday-photos/1235645.html")
     end
 
     it "should give relative links for the index page" do
-      path_manager.relative_path_for(photo_id, :jpg).should ==  "holiday-photos/1235645.jpg"
-      path_manager.relative_path_for(photo_id, :html).should == "holiday-photos/1235645.html"
+      expect(path_manager.relative_path_for(photo_id, :jpg)).to eq( "holiday-photos/1235645.jpg")
+      expect(path_manager.relative_path_for(photo_id, :html)).to eq("holiday-photos/1235645.html")
     end
 
     it "should give filenames for the photo page" do
-      path_manager.filename_for_photo(photo_id, :jpg).should ==  "1235645.jpg"
+      expect(path_manager.filename_for_photo(photo_id, :jpg)).to eq( "1235645.jpg")
     end
 
     it "should give 'back' links back to the index page for photo pages" do
-      path_manager.back_to_index.should ==  "../holiday-photos.html"
+      expect(path_manager.back_to_index).to eq( "../holiday-photos.html")
     end
 
   end
