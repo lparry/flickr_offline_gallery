@@ -4,7 +4,7 @@ require 'flickr_offline_gallery'
 
 FlickRaw.api_key       = "#{ENV["FLICKR_API_KEY"]}"
 FlickRaw.shared_secret = "#{ENV["FLICKR_SHARED_SECRET"]}"
-ENV["VERBOSE"] = true
+ENV["VERBOSE"] = "true"
 
 if ARGV.size == 0
   puts "FlickrOfflineGallery"
