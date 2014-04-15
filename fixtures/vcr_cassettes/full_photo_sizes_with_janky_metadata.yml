@@ -1,0 +1,147 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.flickr.com/services/rest/
+    body:
+      encoding: US-ASCII
+      string: photo_id=9579531199&method=flickr.photos.getInfo&format=json&nojsoncallback=1
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - FlickRaw/0.9.8
+      Authorization:
+      - OAuth realm="https://api.flickr.com/services/rest/", oauth_consumer_key="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        oauth_nonce="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", oauth_signature="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        oauth_signature_method="PLAINTEXT", oauth_timestamp="1397582328", oauth_token="",
+        oauth_version="1.0"
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 15 Apr 2014 17:18:49 GMT
+      P3p:
+      - policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV
+        TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY
+        ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+      Cache-Control:
+      - private
+      X-Served-By:
+      - www70.flickr.bf1.yahoo.com
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '595'
+      Content-Type:
+      - application/json
+      Age:
+      - '1'
+      Via:
+      - http/1.1 fts124.flickr.bf1.yahoo.com (ApacheTrafficServer/4.0.2 [cMsSf ]),
+        http/1.1 r11.ycpi.gq1.yahoo.net (ApacheTrafficServer/4.0.2 [cMsSf ])
+      Server:
+      - ATS
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"photo":{"id":"9579531199", "secret":"80e975dcbb", "server":"7359",
+        "farm":8, "dateuploaded":"1377335377", "isfavorite":0, "license":"0", "safety_level":"0",
+        "rotation":0, "originalsecret":"b48aba52c1", "originalformat":"jpg", "owner":{"nsid":"83213379@N00",
+        "username":"Lucas the nomad", "realname":"", "location":"Melbourne, Australia",
+        "iconserver":"7134", "iconfarm":8, "path_alias":"lucasthenomad"}, "title":{"_content":"This
+        \"n\u00e9eds\" s\u00f3me ''f\u00fc**ed up \u00e7hara\"cter\u015f"}, "description":{"_content":""},
+        "visibility":{"ispublic":1, "isfriend":0, "isfamily":0}, "dates":{"posted":"1377335377",
+        "taken":"2013-08-11 22:02:49", "takengranularity":"0", "lastupdate":"1397550902"},
+        "views":"17", "editability":{"cancomment":0, "canaddmeta":0}, "publiceditability":{"cancomment":1,
+        "canaddmeta":0}, "usage":{"candownload":1, "canblog":0, "canprint":0, "canshare":1},
+        "comments":{"_content":"0"}, "notes":{"note":[]}, "people":{"haspeople":0},
+        "tags":{"tag":[]}, "urls":{"url":[{"type":"photopage", "_content":"https:\/\/www.flickr.com\/photos\/lucasthenomad\/9579531199\/"}]},
+        "media":"photo"}, "stat":"ok"}'
+    http_version: 
+  recorded_at: Tue, 15 Apr 2014 17:18:50 GMT
+- request:
+    method: post
+    uri: https://api.flickr.com/services/rest/
+    body:
+      encoding: US-ASCII
+      string: photo_id=9579531199&method=flickr.photos.getSizes&format=json&nojsoncallback=1
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - FlickRaw/0.9.8
+      Authorization:
+      - OAuth realm="https://api.flickr.com/services/rest/", oauth_consumer_key="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        oauth_nonce="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", oauth_signature="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        oauth_signature_method="PLAINTEXT", oauth_timestamp="1397582330", oauth_token="",
+        oauth_version="1.0"
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 15 Apr 2014 17:18:50 GMT
+      P3p:
+      - policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV
+        TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY
+        ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+      Cache-Control:
+      - private
+      X-Served-By:
+      - www137.flickr.bf1.yahoo.com
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '409'
+      Content-Type:
+      - application/json
+      Age:
+      - '0'
+      Via:
+      - http/1.1 fts124.flickr.bf1.yahoo.com (ApacheTrafficServer/4.0.2 [cMsSf ]),
+        http/1.1 r04.ycpi.sp2.yahoo.net (ApacheTrafficServer/4.0.2 [cMsSf ])
+      Server:
+      - ATS
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"sizes":{"canblog":0, "canprint":0, "candownload":1, "size":[{"label":"Square",
+        "width":75, "height":75, "source":"https:\/\/farm8.staticflickr.com\/7359\/9579531199_80e975dcbb_s.jpg",
+        "url":"https:\/\/www.flickr.com\/photos\/lucasthenomad\/9579531199\/sizes\/sq\/",
+        "media":"photo"}, {"label":"Large Square", "width":"150", "height":"150",
+        "source":"https:\/\/farm8.staticflickr.com\/7359\/9579531199_80e975dcbb_q.jpg",
+        "url":"https:\/\/www.flickr.com\/photos\/lucasthenomad\/9579531199\/sizes\/q\/",
+        "media":"photo"}, {"label":"Thumbnail", "width":"100", "height":"56", "source":"https:\/\/farm8.staticflickr.com\/7359\/9579531199_80e975dcbb_t.jpg",
+        "url":"https:\/\/www.flickr.com\/photos\/lucasthenomad\/9579531199\/sizes\/t\/",
+        "media":"photo"}, {"label":"Small", "width":"240", "height":"135", "source":"https:\/\/farm8.staticflickr.com\/7359\/9579531199_80e975dcbb_m.jpg",
+        "url":"https:\/\/www.flickr.com\/photos\/lucasthenomad\/9579531199\/sizes\/s\/",
+        "media":"photo"}, {"label":"Small 320", "width":"320", "height":180, "source":"https:\/\/farm8.staticflickr.com\/7359\/9579531199_80e975dcbb_n.jpg",
+        "url":"https:\/\/www.flickr.com\/photos\/lucasthenomad\/9579531199\/sizes\/n\/",
+        "media":"photo"}, {"label":"Medium", "width":"500", "height":"281", "source":"https:\/\/farm8.staticflickr.com\/7359\/9579531199_80e975dcbb.jpg",
+        "url":"https:\/\/www.flickr.com\/photos\/lucasthenomad\/9579531199\/sizes\/m\/",
+        "media":"photo"}, {"label":"Medium 640", "width":"640", "height":"360", "source":"https:\/\/farm8.staticflickr.com\/7359\/9579531199_80e975dcbb_z.jpg",
+        "url":"https:\/\/www.flickr.com\/photos\/lucasthenomad\/9579531199\/sizes\/z\/",
+        "media":"photo"}, {"label":"Medium 800", "width":"800", "height":450, "source":"https:\/\/farm8.staticflickr.com\/7359\/9579531199_80e975dcbb_c.jpg",
+        "url":"https:\/\/www.flickr.com\/photos\/lucasthenomad\/9579531199\/sizes\/c\/",
+        "media":"photo"}, {"label":"Large", "width":"894", "height":"503", "source":"https:\/\/farm8.staticflickr.com\/7359\/9579531199_80e975dcbb_b.jpg",
+        "url":"https:\/\/www.flickr.com\/photos\/lucasthenomad\/9579531199\/sizes\/l\/",
+        "media":"photo"}, {"label":"Original", "width":"894", "height":"503", "source":"https:\/\/farm8.staticflickr.com\/7359\/9579531199_b48aba52c1_o.jpg",
+        "url":"https:\/\/www.flickr.com\/photos\/lucasthenomad\/9579531199\/sizes\/o\/",
+        "media":"photo"}]}, "stat":"ok"}'
+    http_version: 
+  recorded_at: Tue, 15 Apr 2014 17:18:51 GMT
+recorded_with: VCR 2.8.0

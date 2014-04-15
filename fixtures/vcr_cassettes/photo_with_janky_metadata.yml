@@ -1,0 +1,70 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.flickr.com/services/rest/
+    body:
+      encoding: US-ASCII
+      string: photo_id=9579531199&method=flickr.photos.getInfo&format=json&nojsoncallback=1
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - FlickRaw/0.9.8
+      Authorization:
+      - OAuth realm="https://api.flickr.com/services/rest/", oauth_consumer_key="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        oauth_nonce="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", oauth_signature="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        oauth_signature_method="PLAINTEXT", oauth_timestamp="1397582324", oauth_token="",
+        oauth_version="1.0"
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 15 Apr 2014 17:18:47 GMT
+      P3p:
+      - policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV
+        TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY
+        ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+      Cache-Control:
+      - private
+      X-Served-By:
+      - www206.flickr.bf1.yahoo.com
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '595'
+      Content-Type:
+      - application/json
+      Age:
+      - '0'
+      Via:
+      - http/1.1 fts101.flickr.bf1.yahoo.com (ApacheTrafficServer/4.0.2 [cMsSf ]),
+        http/1.1 r04.ycpi.sjb.yahoo.net (ApacheTrafficServer/4.0.2 [cMsSf ])
+      Server:
+      - ATS
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"photo":{"id":"9579531199", "secret":"80e975dcbb", "server":"7359",
+        "farm":8, "dateuploaded":"1377335377", "isfavorite":0, "license":"0", "safety_level":"0",
+        "rotation":0, "originalsecret":"b48aba52c1", "originalformat":"jpg", "owner":{"nsid":"83213379@N00",
+        "username":"Lucas the nomad", "realname":"", "location":"Melbourne, Australia",
+        "iconserver":"7134", "iconfarm":8, "path_alias":"lucasthenomad"}, "title":{"_content":"This
+        \"n\u00e9eds\" s\u00f3me ''f\u00fc**ed up \u00e7hara\"cter\u015f"}, "description":{"_content":""},
+        "visibility":{"ispublic":1, "isfriend":0, "isfamily":0}, "dates":{"posted":"1377335377",
+        "taken":"2013-08-11 22:02:49", "takengranularity":"0", "lastupdate":"1397550902"},
+        "views":"17", "editability":{"cancomment":0, "canaddmeta":0}, "publiceditability":{"cancomment":1,
+        "canaddmeta":0}, "usage":{"candownload":1, "canblog":0, "canprint":0, "canshare":1},
+        "comments":{"_content":"0"}, "notes":{"note":[]}, "people":{"haspeople":0},
+        "tags":{"tag":[]}, "urls":{"url":[{"type":"photopage", "_content":"https:\/\/www.flickr.com\/photos\/lucasthenomad\/9579531199\/"}]},
+        "media":"photo"}, "stat":"ok"}'
+    http_version: 
+  recorded_at: Tue, 15 Apr 2014 17:18:48 GMT
+recorded_with: VCR 2.8.0

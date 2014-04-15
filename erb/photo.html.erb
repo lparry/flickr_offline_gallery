@@ -1,5 +1,6 @@
 <html>
   <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <style>
       body {
         background-color: dimgrey;
@@ -52,7 +53,7 @@
       <% sizes.each do |size| %>
       <span class="snippet" id="<%= size.key %>">
         <h4><%= size.label %></h4>
-        <textarea>&lt;a href="<%= photo_page_url %>" title="<%= title %> by <%= author %>, on Flickr"&gt;&lt;img src="<%= size.url %>" width="<%= size.width %>" height="<%= size.height %>" alt="<%= title %>"&gt;&lt;/a&gt;</textarea>
+        <textarea>&lt;a href="<%= photo_page_url %>" title="<%= CGI.escapeHTML(title) %> by <%= author %>, on Flickr"&gt;&lt;img src="<%= size.url %>" width="<%= size.width %>" height="<%= size.height %>" alt="<%= CGI.escapeHTML(title) %>"&gt;&lt;/a&gt;</textarea>
       </span>
       <% end %>
     </span>
