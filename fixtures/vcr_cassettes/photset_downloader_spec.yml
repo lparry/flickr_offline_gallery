@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://farm3.staticflickr.com/2862/11439134074_b97703684d_t.jpg
+    uri: https://farm3.staticflickr.com/2862/11439134074_b97703684d_t.jpg
     body:
       encoding: US-ASCII
       string: ''
@@ -13,7 +13,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 12 Jan 2014 13:37:23 GMT
+      - Tue, 15 Apr 2014 17:06:54 GMT
       Content-Type:
       - image/jpeg
       Content-Length:
@@ -27,22 +27,19 @@ http_interactions:
       Cache-Control:
       - max-age=315360000,public
       Expires:
-      - Fri, 12 Jan 2024 23:26:29 UTC
+      - Mon, 15 Apr 2024 03:09:47 UTC
       Last-Modified:
-      - Wed, 18 Dec 2013 19:24:02 GMT
+      - Wed, 18 Dec 2013 19:23:59 GMT
       Accept-Ranges:
       - bytes
-      X-Cache:
-      - HIT from cache430.flickr.ch1.yahoo.com
-      - MISS from photocache320.flickr.bf1.yahoo.com
-      X-Cache-Lookup:
-      - HIT from cache430.flickr.ch1.yahoo.com:81
-      - MISS from photocache320.flickr.bf1.yahoo.com:81
       Age:
-      - '1114'
+      - '287'
+      X-Cache:
+      - HIT from photocache320.flickr.gq1.yahoo.com
+      X-Cache-Lookup:
+      - HIT from photocache320.flickr.gq1.yahoo.com:81
       Via:
-      - 1.1 photocache320.flickr.bf1.yahoo.com:81 (squid/2.7.STABLE9), 1.1 cache430.flickr.ch1.yahoo.com:81
-        (squid/2.7.STABLE9)
+      - 1.1 photocache320.flickr.gq1.yahoo.com:81 (squid/2.7.STABLE9)
     body:
       encoding: ASCII-8BIT
       string: !binary |-
@@ -320,10 +317,10 @@ http_interactions:
         kRiJ3IA/yVG/8DX8nYV6SEFA7D9wK9Z8Sgo+f7GokeGqWY1llRmkcBmPdvJP
         /X1cp1SSUjYVQhAUkKPNf//Z
     http_version: 
-  recorded_at: Sun, 12 Jan 2014 13:37:24 GMT
+  recorded_at: Tue, 15 Apr 2014 17:06:56 GMT
 - request:
     method: get
-    uri: http://farm8.staticflickr.com/7359/9579531199_80e975dcbb_t.jpg
+    uri: https://farm8.staticflickr.com/7359/9579531199_80e975dcbb_t.jpg
     body:
       encoding: US-ASCII
       string: ''
@@ -334,7 +331,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 12 Jan 2014 13:37:24 GMT
+      - Tue, 15 Apr 2014 17:06:57 GMT
       Content-Type:
       - image/jpeg
       Content-Length:
@@ -348,22 +345,19 @@ http_interactions:
       Cache-Control:
       - max-age=315360000,public
       Expires:
-      - Fri, 12 Jan 2024 23:26:32 UTC
+      - Mon, 15 Apr 2024 03:09:51 UTC
       Last-Modified:
-      - Sat, 24 Aug 2013 09:04:13 GMT
+      - Sat, 24 Aug 2013 09:04:12 GMT
       Accept-Ranges:
       - bytes
-      X-Cache:
-      - HIT from cache407.flickr.ch1.yahoo.com
-      - MISS from photocache807.flickr.bf1.yahoo.com
-      X-Cache-Lookup:
-      - HIT from cache407.flickr.ch1.yahoo.com:81
-      - MISS from photocache807.flickr.bf1.yahoo.com:81
       Age:
-      - '1112'
+      - '286'
+      X-Cache:
+      - HIT from photocache807.flickr.gq1.yahoo.com
+      X-Cache-Lookup:
+      - HIT from photocache807.flickr.gq1.yahoo.com:81
       Via:
-      - 1.1 photocache807.flickr.bf1.yahoo.com:81 (squid/2.7.STABLE9), 1.1 cache407.flickr.ch1.yahoo.com:81
-        (squid/2.7.STABLE9)
+      - 1.1 photocache807.flickr.gq1.yahoo.com:81 (squid/2.7.STABLE9)
     body:
       encoding: ASCII-8BIT
       string: !binary |-
@@ -535,10 +529,10 @@ http_interactions:
         yJo18K7wHt8SmdNY6H/U8RosutnFvlWL62lQbQwSsTbMufhthZc/yDz+3SXU
         hNil18JSpPy+IByMyORiQv/Z
     http_version: 
-  recorded_at: Sun, 12 Jan 2014 13:37:24 GMT
+  recorded_at: Tue, 15 Apr 2014 17:06:58 GMT
 - request:
     method: get
-    uri: http://farm8.staticflickr.com/7402/10440808526_c3fd515635_t.jpg
+    uri: https://farm8.staticflickr.com/7402/10440808526_c3fd515635_t.jpg
     body:
       encoding: US-ASCII
       string: ''
@@ -549,7 +543,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 12 Jan 2014 13:37:25 GMT
+      - Tue, 15 Apr 2014 17:06:59 GMT
       Content-Type:
       - image/jpeg
       Content-Length:
@@ -563,22 +557,19 @@ http_interactions:
       Cache-Control:
       - max-age=315360000,public
       Expires:
-      - Fri, 12 Jan 2024 23:26:34 UTC
+      - Mon, 15 Apr 2024 03:09:52 UTC
       Last-Modified:
-      - Wed, 23 Oct 2013 14:41:14 GMT
+      - Wed, 23 Oct 2013 14:41:16 GMT
       Accept-Ranges:
       - bytes
-      X-Cache:
-      - HIT from cache404.flickr.ch1.yahoo.com
-      - MISS from photocache819.flickr.bf1.yahoo.com
-      X-Cache-Lookup:
-      - HIT from cache404.flickr.ch1.yahoo.com:81
-      - MISS from photocache819.flickr.bf1.yahoo.com:81
       Age:
-      - '1111'
+      - '287'
+      X-Cache:
+      - HIT from photocache819.flickr.gq1.yahoo.com
+      X-Cache-Lookup:
+      - HIT from photocache819.flickr.gq1.yahoo.com:81
       Via:
-      - 1.1 photocache819.flickr.bf1.yahoo.com:81 (squid/2.7.STABLE9), 1.1 cache404.flickr.ch1.yahoo.com:81
-        (squid/2.7.STABLE9)
+      - 1.1 photocache819.flickr.gq1.yahoo.com:81 (squid/2.7.STABLE9)
     body:
       encoding: ASCII-8BIT
       string: !binary |-
@@ -764,10 +755,10 @@ http_interactions:
         HBGrgQol89DDKHLKd39QYg9/cHQloUSCvmeBJApB2qCCwDHv7nSJIUSGOrme
         NWMjZJbODj8xH+mgLj1VwF//2Q==
     http_version: 
-  recorded_at: Sun, 12 Jan 2014 13:37:25 GMT
+  recorded_at: Tue, 15 Apr 2014 17:07:01 GMT
 - request:
     method: get
-    uri: http://farm8.staticflickr.com/7314/11224643544_18c3674fbe_t.jpg
+    uri: https://farm8.staticflickr.com/7314/11224643544_18c3674fbe_t.jpg
     body:
       encoding: US-ASCII
       string: ''
@@ -778,7 +769,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 12 Jan 2014 13:37:25 GMT
+      - Tue, 15 Apr 2014 17:07:01 GMT
       Content-Type:
       - image/jpeg
       Content-Length:
@@ -792,22 +783,19 @@ http_interactions:
       Cache-Control:
       - max-age=315360000,public
       Expires:
-      - Wed, 06 Dec 2023 04:20:44 UTC
+      - Mon, 15 Apr 2024 03:09:54 UTC
       Last-Modified:
-      - Thu, 05 Dec 2013 18:12:55 GMT
+      - Thu, 05 Dec 2013 18:12:58 GMT
       Accept-Ranges:
       - bytes
-      X-Cache:
-      - HIT from cache412.flickr.ch1.yahoo.com
-      - HIT from photocache817.flickr.bf1.yahoo.com
-      X-Cache-Lookup:
-      - HIT from cache412.flickr.ch1.yahoo.com:81
-      - HIT from photocache817.flickr.bf1.yahoo.com:85
       Age:
-      - '3010505'
+      - '287'
+      X-Cache:
+      - HIT from photocache817.flickr.gq1.yahoo.com
+      X-Cache-Lookup:
+      - HIT from photocache817.flickr.gq1.yahoo.com:85
       Via:
-      - 1.1 photocache817.flickr.bf1.yahoo.com:85 (squid/2.7.STABLE9), 1.1 cache412.flickr.ch1.yahoo.com:81
-        (squid/2.7.STABLE9)
+      - 1.1 photocache817.flickr.gq1.yahoo.com:85 (squid/2.7.STABLE9)
     body:
       encoding: ASCII-8BIT
       string: !binary |-
@@ -1025,5 +1013,5 @@ http_interactions:
         EFCgfBQgUf8AQHW5sLW9lMdWKViMkIHqc0heTLn4jjn+h1ssCArArFlBY5P8
         nqSoX//Z
     http_version: 
-  recorded_at: Sun, 12 Jan 2014 13:37:25 GMT
+  recorded_at: Tue, 15 Apr 2014 17:07:03 GMT
 recorded_with: VCR 2.8.0

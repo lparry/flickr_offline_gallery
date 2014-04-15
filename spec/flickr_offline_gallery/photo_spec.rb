@@ -28,11 +28,11 @@ module FlickrOfflineGallery
     end
 
     it "should have a url" do
-      expect(photo.url).to eq("http://www.flickr.com/photos/83213379@N00/10440808526/in/set-ffff")
+      expect(photo.url).to eq("https://www.flickr.com/photos/lucasthenomad/10440808526/in/set-ffff")
     end
 
     it "should have a base_url" do
-      expect(photo.base_url).to eq("http://www.flickr.com/photos/83213379@N00/10440808526/")
+      expect(photo.base_url).to eq("https://www.flickr.com/photos/lucasthenomad/10440808526/")
     end
 
     context "delegating path work to the path manager" do

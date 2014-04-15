@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://api.flickr.com/services/rest/
+    uri: https://api.flickr.com/services/rest/
     body:
       encoding: US-ASCII
       string: photo_id=10440808526&method=flickr.photos.getInfo&format=json&nojsoncallback=1
@@ -10,13 +10,13 @@ http_interactions:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - '*/*'
+      - "*/*"
       User-Agent:
-      - FlickRaw/0.9.7
+      - FlickRaw/0.9.8
       Authorization:
-      - OAuth realm="http://api.flickr.com/services/rest/", oauth_consumer_key="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      - OAuth realm="https://api.flickr.com/services/rest/", oauth_consumer_key="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
         oauth_nonce="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", oauth_signature="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-        oauth_signature_method="HMAC-SHA1", oauth_timestamp="1389533835", oauth_token="",
+        oauth_signature_method="PLAINTEXT", oauth_timestamp="1397581543", oauth_token="",
         oauth_version="1.0"
       Content-Type:
       - application/x-www-form-urlencoded
@@ -26,7 +26,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 12 Jan 2014 13:37:15 GMT
+      - Tue, 15 Apr 2014 17:05:42 GMT
       P3p:
       - policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV
         TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY
@@ -34,20 +34,20 @@ http_interactions:
       Cache-Control:
       - private
       X-Served-By:
-      - www2.flickr.bf1.yahoo.com
+      - www46.flickr.bf1.yahoo.com
       Vary:
       - Accept-Encoding
       Content-Length:
-      - '603'
+      - '610'
       Content-Type:
       - application/json
       Age:
-      - '4'
-      Server:
-      - ATS/4.0.2
+      - '3'
       Via:
-      - http/1.1 fts110.flickr.bf1.yahoo.com (ApacheTrafficServer/4.0.1 [cMsSf ]),
-        http/1.1 r07.ycpi.ams.yahoo.net (ApacheTrafficServer/4.0.2 [cMsSf ])
+      - http/1.1 fts114.flickr.bf1.yahoo.com (ApacheTrafficServer/4.0.2 [cMsSf ]),
+        http/1.1 r04.ycpi.sp2.yahoo.net (ApacheTrafficServer/4.0.2 [cMsSf ])
+      Server:
+      - ATS
       Connection:
       - keep-alive
     body:
@@ -56,16 +56,16 @@ http_interactions:
         "farm":8, "dateuploaded":"1382539271", "isfavorite":0, "license":"0", "safety_level":"0",
         "rotation":0, "originalsecret":"5a2e1d9666", "originalformat":"jpg", "owner":{"nsid":"83213379@N00",
         "username":"Lucas the nomad", "realname":"", "location":"Melbourne, Australia",
-        "iconserver":"7410", "iconfarm":8, "path_alias":null}, "title":{"_content":"Giant
+        "iconserver":"7134", "iconfarm":8, "path_alias":"lucasthenomad"}, "title":{"_content":"Giant
         hippo yawn"}, "description":{"_content":""}, "visibility":{"ispublic":1, "isfriend":0,
         "isfamily":0}, "dates":{"posted":"1382539271", "taken":"2013-08-13 18:27:16",
-        "takengranularity":"0", "lastupdate":"1382539314"}, "views":"38", "editability":{"cancomment":0,
+        "takengranularity":"0", "lastupdate":"1382539314"}, "views":"48", "editability":{"cancomment":0,
         "canaddmeta":0}, "publiceditability":{"cancomment":1, "canaddmeta":0}, "usage":{"candownload":1,
         "canblog":0, "canprint":0, "canshare":1}, "comments":{"_content":"0"}, "notes":{"note":[]},
         "people":{"haspeople":0}, "tags":{"tag":[{"id":"5152225-10440808526-25848",
-        "author":"83213379@N00", "raw":"Uganda", "_content":"uganda", "machine_tag":0}]},
-        "urls":{"url":[{"type":"photopage", "_content":"http:\/\/www.flickr.com\/photos\/83213379@N00\/10440808526\/"}]},
+        "author":"83213379@N00", "authorname":"Lucas the nomad", "raw":"Uganda", "_content":"uganda",
+        "machine_tag":0}]}, "urls":{"url":[{"type":"photopage", "_content":"https:\/\/www.flickr.com\/photos\/lucasthenomad\/10440808526\/"}]},
         "media":"photo"}, "stat":"ok"}'
     http_version: 
-  recorded_at: Sun, 12 Jan 2014 13:37:16 GMT
+  recorded_at: Tue, 15 Apr 2014 17:05:44 GMT
 recorded_with: VCR 2.8.0

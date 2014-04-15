@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://api.flickr.com/services/rest/
+    uri: https://api.flickr.com/services/rest/
     body:
       encoding: US-ASCII
       string: method=flickr.reflection.getMethods&format=json&nojsoncallback=1
@@ -10,13 +10,13 @@ http_interactions:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - '*/*'
+      - "*/*"
       User-Agent:
-      - FlickRaw/0.9.7
+      - FlickRaw/0.9.8
       Authorization:
-      - OAuth realm="http://api.flickr.com/services/rest/", oauth_consumer_key="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      - OAuth realm="https://api.flickr.com/services/rest/", oauth_consumer_key="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
         oauth_nonce="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", oauth_signature="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-        oauth_signature_method="HMAC-SHA1", oauth_timestamp="1389533834", oauth_token="",
+        oauth_signature_method="PLAINTEXT", oauth_timestamp="1397581538", oauth_token="",
         oauth_version="1.0"
       Content-Type:
       - application/x-www-form-urlencoded
@@ -26,7 +26,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 12 Jan 2014 13:37:15 GMT
+      - Tue, 15 Apr 2014 17:05:39 GMT
       P3p:
       - policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV
         TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY
@@ -34,7 +34,7 @@ http_interactions:
       Cache-Control:
       - private
       X-Served-By:
-      - www31.flickr.bf1.yahoo.com
+      - www321.flickr.bf1.yahoo.com
       Vary:
       - Accept-Encoding
       Content-Length:
@@ -43,11 +43,11 @@ http_interactions:
       - application/json
       Age:
       - '0'
-      Server:
-      - ATS/4.0.2
       Via:
-      - http/1.1 fts113.flickr.bf1.yahoo.com (ApacheTrafficServer/4.0.1 [cMsSf ]),
-        http/1.1 r12.ycpi.ams.yahoo.net (ApacheTrafficServer/4.0.2 [cMsSf ])
+      - http/1.1 fts104.flickr.bf1.yahoo.com (ApacheTrafficServer/4.0.2 [cMsSf ]),
+        http/1.1 r08.ycpi.gq1.yahoo.net (ApacheTrafficServer/4.0.2 [cMsSf ])
+      Server:
+      - ATS
       Connection:
       - keep-alive
     body:
@@ -156,5 +156,5 @@ http_interactions:
         {"_content":"flickr.urls.lookupGroup"}, {"_content":"flickr.urls.lookupUser"}]},
         "stat":"ok"}'
     http_version: 
-  recorded_at: Sun, 12 Jan 2014 13:37:15 GMT
+  recorded_at: Tue, 15 Apr 2014 17:05:41 GMT
 recorded_with: VCR 2.8.0

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://api.flickr.com/services/rest/
+    uri: https://api.flickr.com/services/rest/
     body:
       encoding: US-ASCII
       string: photo_id=10440808526&method=flickr.photos.getSizes&format=json&nojsoncallback=1
@@ -10,13 +10,13 @@ http_interactions:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - '*/*'
+      - "*/*"
       User-Agent:
-      - FlickRaw/0.9.7
+      - FlickRaw/0.9.8
       Authorization:
-      - OAuth realm="http://api.flickr.com/services/rest/", oauth_consumer_key="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      - OAuth realm="https://api.flickr.com/services/rest/", oauth_consumer_key="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
         oauth_nonce="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", oauth_signature="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-        oauth_signature_method="HMAC-SHA1", oauth_timestamp="1389533837", oauth_token="",
+        oauth_signature_method="PLAINTEXT", oauth_timestamp="1397581541", oauth_token="",
         oauth_version="1.0"
       Content-Type:
       - application/x-www-form-urlencoded
@@ -26,7 +26,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 12 Jan 2014 13:37:17 GMT
+      - Tue, 15 Apr 2014 17:05:41 GMT
       P3p:
       - policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV
         TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY
@@ -34,51 +34,51 @@ http_interactions:
       Cache-Control:
       - private
       X-Served-By:
-      - www27.flickr.bf1.yahoo.com
+      - www6.flickr.bf1.yahoo.com
       Vary:
       - Accept-Encoding
       Content-Length:
-      - '471'
+      - '473'
       Content-Type:
       - application/json
       Age:
       - '0'
-      Server:
-      - ATS/4.0.2
       Via:
-      - http/1.1 fts116.flickr.bf1.yahoo.com (ApacheTrafficServer/4.0.1 [cMsSf ]),
-        http/1.1 r12.ycpi.dee.yahoo.net (ApacheTrafficServer/4.0.2 [cMsSf ])
+      - http/1.1 fts114.flickr.bf1.yahoo.com (ApacheTrafficServer/4.0.2 [cMsSf ]),
+        http/1.1 r12.ycpi.gq1.yahoo.net (ApacheTrafficServer/4.0.2 [cMsSf ])
+      Server:
+      - ATS
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
       string: '{"sizes":{"canblog":0, "canprint":0, "candownload":1, "size":[{"label":"Square",
-        "width":75, "height":75, "source":"http:\/\/farm8.staticflickr.com\/7402\/10440808526_c3fd515635_s.jpg",
-        "url":"http:\/\/www.flickr.com\/photos\/83213379@N00\/10440808526\/sizes\/sq\/",
+        "width":75, "height":75, "source":"https:\/\/farm8.staticflickr.com\/7402\/10440808526_c3fd515635_s.jpg",
+        "url":"https:\/\/www.flickr.com\/photos\/lucasthenomad\/10440808526\/sizes\/sq\/",
         "media":"photo"}, {"label":"Large Square", "width":"150", "height":"150",
-        "source":"http:\/\/farm8.staticflickr.com\/7402\/10440808526_c3fd515635_q.jpg",
-        "url":"http:\/\/www.flickr.com\/photos\/83213379@N00\/10440808526\/sizes\/q\/",
-        "media":"photo"}, {"label":"Thumbnail", "width":"100", "height":"75", "source":"http:\/\/farm8.staticflickr.com\/7402\/10440808526_c3fd515635_t.jpg",
-        "url":"http:\/\/www.flickr.com\/photos\/83213379@N00\/10440808526\/sizes\/t\/",
-        "media":"photo"}, {"label":"Small", "width":"240", "height":"180", "source":"http:\/\/farm8.staticflickr.com\/7402\/10440808526_c3fd515635_m.jpg",
-        "url":"http:\/\/www.flickr.com\/photos\/83213379@N00\/10440808526\/sizes\/s\/",
-        "media":"photo"}, {"label":"Small 320", "width":"320", "height":240, "source":"http:\/\/farm8.staticflickr.com\/7402\/10440808526_c3fd515635_n.jpg",
-        "url":"http:\/\/www.flickr.com\/photos\/83213379@N00\/10440808526\/sizes\/n\/",
-        "media":"photo"}, {"label":"Medium", "width":"500", "height":"375", "source":"http:\/\/farm8.staticflickr.com\/7402\/10440808526_c3fd515635.jpg",
-        "url":"http:\/\/www.flickr.com\/photos\/83213379@N00\/10440808526\/sizes\/m\/",
-        "media":"photo"}, {"label":"Medium 640", "width":"640", "height":"481", "source":"http:\/\/farm8.staticflickr.com\/7402\/10440808526_c3fd515635_z.jpg",
-        "url":"http:\/\/www.flickr.com\/photos\/83213379@N00\/10440808526\/sizes\/z\/",
-        "media":"photo"}, {"label":"Medium 800", "width":"800", "height":601, "source":"http:\/\/farm8.staticflickr.com\/7402\/10440808526_c3fd515635_c.jpg",
-        "url":"http:\/\/www.flickr.com\/photos\/83213379@N00\/10440808526\/sizes\/c\/",
-        "media":"photo"}, {"label":"Large", "width":"1024", "height":"769", "source":"http:\/\/farm8.staticflickr.com\/7402\/10440808526_c3fd515635_b.jpg",
-        "url":"http:\/\/www.flickr.com\/photos\/83213379@N00\/10440808526\/sizes\/l\/",
-        "media":"photo"}, {"label":"Large 1600", "width":"1600", "height":1201, "source":"http:\/\/farm8.staticflickr.com\/7402\/10440808526_daad8821b0_h.jpg",
-        "url":"http:\/\/www.flickr.com\/photos\/83213379@N00\/10440808526\/sizes\/h\/",
-        "media":"photo"}, {"label":"Large 2048", "width":"2048", "height":1537, "source":"http:\/\/farm8.staticflickr.com\/7402\/10440808526_793af299f0_k.jpg",
-        "url":"http:\/\/www.flickr.com\/photos\/83213379@N00\/10440808526\/sizes\/k\/",
-        "media":"photo"}, {"label":"Original", "width":"2603", "height":"1954", "source":"http:\/\/farm8.staticflickr.com\/7402\/10440808526_5a2e1d9666_o.jpg",
-        "url":"http:\/\/www.flickr.com\/photos\/83213379@N00\/10440808526\/sizes\/o\/",
+        "source":"https:\/\/farm8.staticflickr.com\/7402\/10440808526_c3fd515635_q.jpg",
+        "url":"https:\/\/www.flickr.com\/photos\/lucasthenomad\/10440808526\/sizes\/q\/",
+        "media":"photo"}, {"label":"Thumbnail", "width":"100", "height":"75", "source":"https:\/\/farm8.staticflickr.com\/7402\/10440808526_c3fd515635_t.jpg",
+        "url":"https:\/\/www.flickr.com\/photos\/lucasthenomad\/10440808526\/sizes\/t\/",
+        "media":"photo"}, {"label":"Small", "width":"240", "height":"180", "source":"https:\/\/farm8.staticflickr.com\/7402\/10440808526_c3fd515635_m.jpg",
+        "url":"https:\/\/www.flickr.com\/photos\/lucasthenomad\/10440808526\/sizes\/s\/",
+        "media":"photo"}, {"label":"Small 320", "width":"320", "height":240, "source":"https:\/\/farm8.staticflickr.com\/7402\/10440808526_c3fd515635_n.jpg",
+        "url":"https:\/\/www.flickr.com\/photos\/lucasthenomad\/10440808526\/sizes\/n\/",
+        "media":"photo"}, {"label":"Medium", "width":"500", "height":"375", "source":"https:\/\/farm8.staticflickr.com\/7402\/10440808526_c3fd515635.jpg",
+        "url":"https:\/\/www.flickr.com\/photos\/lucasthenomad\/10440808526\/sizes\/m\/",
+        "media":"photo"}, {"label":"Medium 640", "width":"640", "height":"481", "source":"https:\/\/farm8.staticflickr.com\/7402\/10440808526_c3fd515635_z.jpg",
+        "url":"https:\/\/www.flickr.com\/photos\/lucasthenomad\/10440808526\/sizes\/z\/",
+        "media":"photo"}, {"label":"Medium 800", "width":"800", "height":601, "source":"https:\/\/farm8.staticflickr.com\/7402\/10440808526_c3fd515635_c.jpg",
+        "url":"https:\/\/www.flickr.com\/photos\/lucasthenomad\/10440808526\/sizes\/c\/",
+        "media":"photo"}, {"label":"Large", "width":"1024", "height":"769", "source":"https:\/\/farm8.staticflickr.com\/7402\/10440808526_c3fd515635_b.jpg",
+        "url":"https:\/\/www.flickr.com\/photos\/lucasthenomad\/10440808526\/sizes\/l\/",
+        "media":"photo"}, {"label":"Large 1600", "width":"1600", "height":1201, "source":"https:\/\/farm8.staticflickr.com\/7402\/10440808526_daad8821b0_h.jpg",
+        "url":"https:\/\/www.flickr.com\/photos\/lucasthenomad\/10440808526\/sizes\/h\/",
+        "media":"photo"}, {"label":"Large 2048", "width":"2048", "height":1537, "source":"https:\/\/farm8.staticflickr.com\/7402\/10440808526_793af299f0_k.jpg",
+        "url":"https:\/\/www.flickr.com\/photos\/lucasthenomad\/10440808526\/sizes\/k\/",
+        "media":"photo"}, {"label":"Original", "width":"2603", "height":"1954", "source":"https:\/\/farm8.staticflickr.com\/7402\/10440808526_5a2e1d9666_o.jpg",
+        "url":"https:\/\/www.flickr.com\/photos\/lucasthenomad\/10440808526\/sizes\/o\/",
         "media":"photo"}]}, "stat":"ok"}'
     http_version: 
-  recorded_at: Sun, 12 Jan 2014 13:37:17 GMT
+  recorded_at: Tue, 15 Apr 2014 17:05:42 GMT
 recorded_with: VCR 2.8.0
