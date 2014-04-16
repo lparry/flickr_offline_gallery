@@ -86,6 +86,14 @@
   <% else %>
     showId("medium_800");
   <% end %>
+
+  // Escape to go back
+  document.onkeyup = function(e) {
+    e = e || window.event;
+    if (e.keyCode == 27) {   // esc
+      document.location.href = "<%= back_to_index_page %>";
+    };
+  };
   </script>
 </body>
 </html>
